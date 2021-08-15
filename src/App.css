@@ -28,6 +28,39 @@
   color: #61dafb;
 }
 
+.notStarted{
+	background-color:#212529;
+}
+
+.completed{
+	background-color:rgba(0,128,0,0.4);
+}
+
+.inProgress{
+	background-color:rgba(0,80,200,0.4);
+}
+
+.panel-body {
+	background-color:black;
+}
+
+.accordion-button{
+	font-weight:bold;
+	background-color:black !important;
+}
+
+
+
+.accordion-button.collapsed{
+	font-weight:bold;
+	background-color:black;
+	color:rgba(192,192,192,1);
+}
+
+.accordion-button.collapsed:after{
+	filter: brightness(0) invert(1);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
