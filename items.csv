@@ -1,0 +1,957 @@
+id,itemid,name,obtained,required,icon
+2243,2,Fire Shard,0,4124,/i/020000/020001.png
+2244,3,Ice Shard,0,1226,/i/020000/020003.png
+2245,4,Wind Shard,0,4719,/i/020000/020004.png
+2246,5,Earth Shard,0,1764,/i/020000/020006.png
+2247,6,Lightning Shard,0,2374,/i/020000/020005.png
+2248,7,Water Shard,0,1573,/i/020000/020002.png
+2249,8,Fire Crystal,0,3,/i/020000/020007.png
+2250,9,Ice Crystal,0,4,/i/020000/020009.png
+2251,10,Wind Crystal,0,7,/i/020000/020010.png
+2252,11,Earth Crystal,0,6,/i/020000/020012.png
+2253,12,Lightning Crystal,0,4,/i/020000/020011.png
+2254,4795,Chanterelle,0,1,/i/025000/025401.png
+2255,5343,Cotton Boll,0,57,/i/021000/021652.png
+2256,5385,Elm Log,0,18,/i/022000/022405.png
+2257,5514,Humus,0,31,/i/022000/022628.png
+2258,5539,Lavender,0,4,/i/025000/025002.png
+2259,5509,Latex,0,11,/i/022000/022643.png
+2260,5136,Raw Peridot,0,6,/i/021000/021453.png
+2261,5138,Raw Amethyst,0,6,/i/021000/021453.png
+2262,7008,Granite,0,435,/i/022000/022615.png
+2263,28769,Skybuilders' Ash Log,0,8,/i/022000/022407.png
+2264,5107,Tin Ore,0,4,/i/021000/021203.png
+2265,5110,Zinc Ore,0,15,/i/021000/021210.png
+2266,5228,Ragstone,0,1,/i/021000/021454.png
+2267,5267,Fine Sand,0,214,/i/021000/021464.png
+2268,5518,Rock Salt,0,93,/i/022000/022617.png
+2269,4831,Cloves,0,2,/i/025000/025023.png
+2270,5106,Copper Ore,0,38,/i/021000/021209.png
+2271,5351,Cock Feather,0,1,/i/021000/021902.png
+2272,5488,Muddy Water,0,215,/i/022000/022637.png
+2273,4830,Black Pepper,0,3,/i/025000/025007.png
+2274,5141,Raw Zircon,0,3,/i/021000/021453.png
+2275,5168,Jade,0,5,/i/021000/021252.png
+2276,28774,Skybuilders' Spring Water,0,8,/i/022000/022614.png
+2277,5536,Mistletoe,0,11,/i/025000/025001.png
+2278,6146,Mirror Apple,0,7,/i/025000/025308.png
+2279,4796,Gil Bun,0,1,/i/025000/025405.png
+2280,4810,Faerie Apple,0,1,/i/025000/025308.png
+2281,5541,Belladonna,0,1,/i/025000/025010.png
+2282,7030,Shroud Seedling,0,6,/i/022000/022630.png
+2283,5393,Rosewood Log,0,123,/i/022000/022411.png
+2284,5414,Rosewood Branch,0,14,/i/022000/022416.png
+2285,4791,Salt Leek,0,1,/i/025000/025216.png
+2286,4837,Midland Basil,0,2,/i/025000/025010.png
+2287,4838,Dragon Pepper,0,1,/i/025000/025013.png
+2288,5134,Raw Garnet,0,7,/i/021000/021453.png
+2289,5135,Raw Goshenite,0,6,/i/021000/021453.png
+2290,5139,Raw Aquamarine,0,8,/i/021000/021453.png
+2291,4792,Ramhorn Zucchini,0,1,/i/025000/025212.png
+2292,4793,Maiden Artichoke,0,1,/i/025000/025220.png
+2293,4840,Mugwort,0,2,/i/025000/025020.png
+2294,4842,Almonds,0,1,/i/025000/025017.png
+2295,4844,Nutmeg,0,3,/i/025000/025021.png
+2296,5391,Mahogany Log,0,440,/i/022000/022410.png
+2297,4797,Button Mushroom,0,4,/i/025000/025402.png
+2298,5140,Raw Rubellite,0,4,/i/021000/021453.png
+2299,5143,Raw Amber,0,50,/i/021000/021453.png
+2300,5524,Alumen,0,136,/i/022000/022616.png
+2301,28772,Skybuilders' Iron Sand,0,12,/i/021000/021204.png
+2302,7031,Desert Seedling,0,25,/i/022000/022632.png
+2303,5125,Wyvern Obsidian,0,7,/i/021000/021467.png
+2304,5521,Saltpeter,0,9,/i/022000/022615.png
+2305,4811,Sun Lemon,0,2,/i/025000/025305.png
+2306,4783,Cieldalaes Spinach,0,3,/i/025000/025206.png
+2307,4784,Highland Parsley,0,1,/i/025000/025211.png
+2308,4804,Cinderfoot Olive,0,4,/i/025000/025307.png
+2309,4808,Lowland Grapes,0,1,/i/025000/025309.png
+2310,4780,Ruby Tomato,0,5,/i/025000/025209.png
+2311,4782,La Noscean Lettuce,0,1,/i/025000/025219.png
+2312,4824,Sunset Wheat,0,24,/i/025000/025357.png
+2313,5342,Straw,0,93,/i/021000/021653.png
+2314,4788,Wizard Eggplant,0,1,/i/025000/025205.png
+2315,4789,Midland Cabbage,0,2,/i/025000/025208.png
+2316,5559,Moor Leech,0,1,/i/022000/022635.png
+2317,5498,Maple Sap,0,1,/i/022000/022642.png
+2318,5513,Potter's Clay,0,264,/i/022000/022634.png
+2319,5516,Beehive Chip,0,84,/i/022000/022611.png
+2320,5116,Cobalt Ore,0,302,/i/021000/021216.png
+2321,5263,Basilisk Egg,0,17,/i/021000/021215.png
+2322,5439,Ogre Horn,0,2,/i/022000/022205.png
+2323,5458,Adamantoise Shell,0,5,/i/022000/022261.png
+2324,5526,Grenade Ash,0,8,/i/021000/021001.png
+2325,4798,White Truffle,0,1,/i/025000/025404.png
+2326,4841,Thyme,0,1,/i/025000/025020.png
+2327,5346,Flax,0,333,/i/021000/021651.png
+2328,5360,Wildfowl Feather,0,7,/i/021000/021904.png
+2329,5390,Oak Log,0,390,/i/022000/022401.png
+2330,5409,Oak Branch,0,8,/i/022000/022416.png
+2331,5562,Tarantula,0,1,/i/022000/022619.png
+2332,28773,Skybuilders' Flax,0,8,/i/021000/021651.png
+2333,5359,Chocobo Feather,0,3,/i/021000/021901.png
+2334,4806,Gridanian Walnut,0,1,/i/025000/025301.png
+2335,5113,Silver Ore,0,123,/i/021000/021211.png
+2336,5153,Ice Rock,0,2,/i/021000/021451.png
+2337,5154,Wind Rock,0,3,/i/021000/021451.png
+2338,5155,Earth Rock,0,4,/i/021000/021451.png
+2339,5270,Silver Sand,0,2,/i/021000/021204.png
+2340,5388,Walnut Log,0,231,/i/022000/022404.png
+2341,5491,Effervescent Water,0,66,/i/022000/022614.png
+2342,5142,Raw Tourmaline,0,3,/i/021000/021453.png
+2343,5144,Raw Spinel,0,3,/i/021000/021453.png
+2344,5525,Black Alumen,0,92,/i/022000/022604.png
+2345,4839,Laurel,0,2,/i/025000/025009.png
+2346,4843,Desert Saffron,0,2,/i/025000/025022.png
+2347,7011,Bloodgrass,0,96,/i/021000/021653.png
+2348,5114,Mythril Ore,0,906,/i/021000/021208.png
+2349,5137,Raw Heliodor,0,6,/i/021000/021453.png
+2350,5523,Silex,0,16,/i/022000/022610.png
+2351,5528,Bomb Ash,0,263,/i/021000/021001.png
+2352,5271,Mythril Sand,0,6,/i/022000/022650.png
+2353,4815,Rolanberry,0,8,/i/025000/025306.png
+2354,4845,Sagolii Sage,0,3,/i/025000/025009.png
+2355,5115,Electrum Ore,0,432,/i/021000/021217.png
+2356,5145,Raw Turquoise,0,3,/i/021000/021453.png
+2357,5272,Electrum Sand,0,6,/i/021000/021214.png
+2358,5564,Black Scorpion,0,1,/i/022000/022621.png
+2359,28770,Skybuilders' Rock Salt,0,8,/i/022000/022617.png
+2360,28771,Skybuilders' Electrum Ore,0,12,/i/021000/021217.png
+2361,5152,Fire Rock,0,3,/i/021000/021451.png
+2362,5156,Lightning Rock,0,3,/i/021000/021451.png
+2363,5157,Water Rock,0,4,/i/021000/021451.png
+2364,5231,Siltstone,0,24,/i/021000/021453.png
+2365,5527,Brimstone,0,9,/i/022000/022613.png
+2366,7029,Island Seedling,0,6,/i/022000/022631.png
+2367,5229,Mudstone,0,118,/i/021000/021455.png
+2368,5230,Limestone,0,431,/i/022000/022615.png
+2369,4778,Coerthan Carrot,0,1,/i/025000/025207.png
+2370,4823,Rye,0,3,/i/025000/025357.png
+2371,5111,Iron Ore,0,765,/i/021000/021202.png
+2372,5269,Iron Sand,0,6,/i/021000/021204.png
+2373,5341,Moko Grass,0,2,/i/021000/021654.png
+2374,5519,Cinnabar,0,46,/i/022000/022629.png
+2375,4777,Wild Onion,0,1,/i/025000/025203.png
+2376,4829,Garlean Garlic,0,3,/i/025000/025006.png
+2377,28916,Skybuilders' Toad,0,8,/i/029000/029228.png
+2378,1613,Blunt Goblin Scimitar,0,1,/i/030000/030425.png
+2379,1616,Nicked Viking Sword,0,1,/i/030000/030494.png
+2380,1621,Blunt Goblin Longsword,0,1,/i/030000/030428.png
+2381,1701,Chipped Hora,0,1,/i/031000/031058.png
+2382,1840,Crooked Guisarme,0,1,/i/031000/031822.png
+2383,2014,Splintered Cane,0,1,/i/032000/032611.png
+2384,2227,Notched Buckler,0,1,/i/030000/030029.png
+2385,2232,Rusting Scutum,0,1,/i/030000/030013.png
+2386,2237,Rotting Round Shield,0,1,/i/030000/030027.png
+2387,2259,Scarred Kite Shield,0,1,/i/030000/030035.png
+2388,2657,Ripped Chef's Hat,0,1,/i/040000/040578.png
+2389,2667,Dented Celata,0,1,/i/040000/040030.png
+2390,2702,Moldering Jester's Cap,0,1,/i/040000/040598.png
+2391,2998,Frayed Cotton Doublet Vest,0,1,/i/042000/042190.png
+2392,3009,Moth-eaten Coatee,0,1,/i/042000/042205.png
+2393,3012,Stained Chef's Apron,0,1,/i/042000/042184.png
+2394,3021,Blackened Scale Mail,0,1,/i/043000/043068.png
+2395,3098,Moth-eaten Seneschal Coatee,0,1,/i/042000/042203.png
+2396,3342,Ripped Hose,0,1,/i/045000/045132.png
+2397,3602,Blackened Smithy's Gloves,0,1,/i/044000/044072.png
+2398,3830,Mildewed Thighboots,0,1,/i/046000/046179.png
+2399,3964,Frayed Chef's Belt,0,1,/i/047000/047251.png
+2400,4751,Mineral Water,0,7,/i/022000/022614.png
+2401,4752,Aldgoat Milk,0,1,/i/024000/024453.png
+2402,4753,Buffalo Milk,0,8,/i/024000/024453.png
+2403,4755,Blue Cheese,0,1,/i/024000/024451.png
+2404,4760,Dodo Tenderloin,0,1,/i/025000/025151.png
+2405,4767,Raptor Shank,0,2,/i/025000/025154.png
+2406,4768,Buffalo Sirloin,0,1,/i/025000/025152.png
+2407,4771,Megalocrab Leg,0,7,/i/029000/029201.png
+2408,4772,Chicken Egg,0,2,/i/025000/025252.png
+2409,4773,Dodo Egg,0,1,/i/025000/025251.png
+2410,4774,Puk Egg,0,2,/i/025000/025251.png
+2411,4775,Apkallu Egg,0,3,/i/025000/025251.png
+2412,4794,Shriekshroom,0,1,/i/025000/025406.png
+2413,4876,Coral Butterfly,0,6,/i/029000/029016.png
+2414,4879,Tiger Cod,0,1,/i/029000/029012.png
+2415,4891,Bianaq Bream,0,1,/i/029000/029009.png
+2416,4893,Hammerhead Shark,0,5,/i/029000/029026.png
+2417,4900,Whitelip Oyster,0,8,/i/029000/029059.png
+2418,4903,Silver Shark,0,5,/i/029000/029011.png
+2419,4905,Raincaller,0,1,/i/029000/029057.png
+2420,4930,Princess Trout,0,2,/i/029000/029285.png
+2421,4935,Brass Loach,0,1,/i/029000/029215.png
+2422,4982,Velodyna Carp,0,1,/i/029000/029211.png
+2423,4997,Northern Pike,0,1,/i/029000/029220.png
+2424,5292,Animal Hide,0,2,/i/021000/021804.png
+2425,5296,Aldgoat Skin,0,26,/i/021000/021814.png
+2426,5300,Gigantoad Skin,0,9,/i/021000/021802.png
+2427,5303,Boar Hide,0,101,/i/021000/021816.png
+2428,5306,Peiste Skin,0,43,/i/021000/021822.png
+2429,5308,Karakul Skin,0,4,/i/021000/021820.png
+2430,5310,Raptor Skin,0,54,/i/021000/021823.png
+2431,5314,Uraeus Skin,0,1,/i/021000/021823.png
+2432,5319,Beast Sinew,0,1,/i/021000/021005.png
+2433,5320,Diremite Sinew,0,9,/i/021000/021005.png
+2434,5321,Hippogryph Sinew,0,16,/i/021000/021005.png
+2435,5322,Raptor Sinew,0,13,/i/021000/021005.png
+2436,5345,Diremite Web,0,26,/i/021000/021664.png
+2437,5347,Fleece,0,516,/i/021000/021655.png
+2438,5348,Apkallu Down,0,15,/i/021000/021655.png
+2439,5349,Snurble Tufts,0,44,/i/021000/021801.png
+2440,5355,Dodo Feather,0,1,/i/021000/021905.png
+2441,5435,Antelope Horn,0,3,/i/022000/022204.png
+2442,5436,Aldgoat Horn,0,36,/i/022000/022206.png
+2443,5444,Wolf Fang,0,6,/i/022000/022303.png
+2444,5447,Sandworm Fang,0,1,/i/022000/022303.png
+2445,5454,Yellow Yarzon Leg,0,1,/i/022000/022259.png
+2446,5455,Blue Yarzon Leg,0,1,/i/022000/022260.png
+2447,5461,Blue Coral,0,4,/i/029000/029061.png
+2448,5462,Red Coral,0,12,/i/029000/029060.png
+2449,5466,Blacklip Oyster,0,1,/i/029000/029058.png
+2450,5468,Cactuar Needle,0,1,/i/022000/022305.png
+2451,5493,Scalekin Blood,0,4,/i/022000/022601.png
+2452,5494,Spoken Blood,0,5,/i/022000/022601.png
+2453,5495,Viscous Secretions,0,3,/i/022000/022603.png
+2454,5496,Acidic Secretions,0,1,/i/022000/022603.png
+2455,5499,Treant Sap,0,1,/i/022000/022642.png
+2456,5549,Blue Landtrap Leaf,0,20,/i/025000/025202.png
+2457,5551,Bat Wing,0,1,/i/021000/021955.png
+2458,5553,Ahriman Wing,0,1,/i/021000/021957.png
+2459,5554,Morbol Vine,0,3,/i/021000/021662.png
+2460,5728,Terebinth,0,23,/i/027000/027614.png
+2461,5998,Tallow Candle,0,9,/i/026000/026102.png
+2462,6149,Night Milk,0,11,/i/024000/024453.png
+2463,7007,Moggle Mog XII's Whisker,0,1,/i/021000/021002.png
+2464,7028,Sylphic Silk,0,15,/i/021000/021608.png
+2465,7032,Lotus Leaf,0,1,/i/021000/021005.png
+2466,7033,Ishgardian Steel Ingot,0,5,/i/020000/020804.png
+2467,7040,Belah'dian Glass,0,3,/i/022000/022605.png
+2468,7041,Blue Fox Hide,0,8,/i/021000/021807.png
+2469,7043,Ahriman Tears,0,2,/i/022000/022614.png
+2470,7044,Exquisite Buttons,0,3,/i/021000/021002.png
+2471,7773,Umbrella Fig,0,1,/i/025000/025010.png
+2472,8022,Young Water Lily,0,3,/i/022000/022632.png
+2473,13073,Stack of Tomes,0,1,/i/052000/052577.png
+2474,13074,Pile of Tomes,0,1,/i/052000/052578.png
+2475,29844,Approved Grade 2 Skybuilders' Maple Log,0,10,/i/023000/023827.png
+2476,29845,Approved Grade 2 Skybuilders' Maple Sap,0,15,/i/023000/023835.png
+2477,29846,Approved Grade 2 Skybuilders' Flax,0,10,/i/023000/023843.png
+2478,29847,Approved Grade 2 Skybuilders' Zinc Ore,0,15,/i/023000/023806.png
+2479,29848,Approved Grade 2 Skybuilders' Rock Salt,0,15,/i/023000/023870.png
+2480,29849,Approved Grade 2 Skybuilders' Iron Sand,0,15,/i/023000/023801.png
+2481,31236,Approved Grade 3 Skybuilders' Ebony Log,0,10,/i/023000/023887.png
+2482,31237,Approved Grade 3 Skybuilders' Sesame,0,15,/i/023000/023843.png
+2483,31238,Approved Grade 3 Skybuilders' Cotton Boll,0,10,/i/023000/023819.png
+2484,31239,Approved Grade 3 Skybuilders' Titanium Ore,0,15,/i/023000/023898.png
+2485,31240,Approved Grade 3 Skybuilders' Rock Salt,0,15,/i/023000/023870.png
+2486,31241,Approved Grade 3 Skybuilders' Hardsilver Sand,0,15,/i/023000/023809.png
+2487,31965,Approved Grade 4 Skybuilders' Mahogany Log,0,10,/i/023000/023938.png
+2488,31966,Approved Grade 4 Skybuilders' Sesame,0,15,/i/023000/023843.png
+2489,31967,Approved Grade 4 Skybuilders' Cotton Boll,0,10,/i/023000/023819.png
+2490,31968,Approved Grade 4 Skybuilders' Ore,0,15,/i/023000/023927.png
+2491,31969,Approved Grade 4 Skybuilders' Rock Salt,0,15,/i/023000/023870.png
+2492,31970,Approved Grade 4 Skybuilders' Mythrite Sand,0,15,/i/023000/023808.png
+2493,5373,Oak Lumber,0,128,/i/022000/022455.png
+2494,5065,Mythril Ingot,0,301,/i/020000/020811.png
+2495,1920,Mythril Cavalry Bow,0,1,/i/032000/032224.png
+2496,5371,Walnut Lumber,0,77,/i/022000/022456.png
+2497,5058,Steel Ingot,0,263,/i/020000/020802.png
+2498,2578,Walnut Fishing Rod,0,1,/i/038000/038205.png
+2499,5367,Elm Lumber,0,6,/i/022000/022457.png
+2500,5376,Rosewood Lumber,0,39,/i/022000/022464.png
+2501,5484,Crab Oil,0,3,/i/022000/022636.png
+2502,2334,Steel Claw Hammer,0,1,/i/035000/035053.png
+2503,5326,Undyed Velveteen,0,20,/i/021000/021604.png
+2504,5485,Linseed Oil,0,41,/i/022000/022636.png
+2505,2349,Steel Crowsbeak Hammer,0,1,/i/035000/035057.png
+2506,5059,Cobalt Ingot,0,142,/i/020000/020802.png
+2507,5374,Mahogany Lumber,0,145,/i/022000/022462.png
+2508,5282,Boar Leather,0,101,/i/022000/022015.png
+2509,2351,Cobalt Cross-pein Hammer,0,1,/i/035000/035108.png
+2510,2436,Steel Awl,0,1,/i/035000/035454.png
+2511,5057,Iron Ingot,0,32,/i/020000/020801.png
+2512,5092,Iron Rivets,0,2,/i/021000/021003.png
+2513,5093,Steel Rivets,0,13,/i/021000/021003.png
+2514,5094,Cobalt Rivets,0,17,/i/021000/021003.png
+2515,7018,Iron Nails,0,10,/i/021000/021004.png
+2516,7019,Steel Nails,0,70,/i/021000/021008.png
+2517,5079,Mythril Plate,0,44,/i/020000/020956.png
+2518,5099,Mythril Rivets,0,42,/i/021000/021003.png
+2519,5201,Eye of Earth,0,4,/i/021000/021256.png
+2520,2476,Mythril Alembic,0,1,/i/035000/035608.png
+2521,2802,Mythril Elmo,0,1,/i/040000/040045.png
+2522,5056,Bronze Ingot,0,4,/i/020000/020803.png
+2523,5071,Bronze Plate,0,1,/i/020000/020953.png
+2524,5072,Iron Plate,0,2,/i/020000/020951.png
+2525,5073,Steel Plate,0,21,/i/020000/020952.png
+2526,5074,Cobalt Plate,0,21,/i/020000/020952.png
+2527,5084,Cobalt Rings,0,2,/i/020000/020911.png
+2528,5089,Mythril Rings,0,14,/i/020000/020913.png
+2529,7021,Iron Joint Plate,0,10,/i/021000/021003.png
+2530,7022,Steel Joint Plate,0,72,/i/021000/021003.png
+2531,7024,Steel Hinge,0,7,/i/021000/021003.png
+2532,5063,Brass Ingot,0,15,/i/020000/020815.png
+2533,5087,Brass Rings,0,1,/i/020000/020914.png
+2534,5066,Electrum Ingot,0,105,/i/020000/020812.png
+2535,5090,Electrum Rings,0,4,/i/020000/020915.png
+2536,5175,Garnet,0,6,/i/021000/021277.png
+2537,5176,Goshenite,0,6,/i/021000/021278.png
+2538,5177,Peridot,0,6,/i/021000/021268.png
+2539,5178,Heliodor,0,6,/i/021000/021283.png
+2540,5179,Amethyst,0,6,/i/021000/021288.png
+2541,5180,Aquamarine,0,8,/i/021000/021291.png
+2542,5181,Rubellite,0,3,/i/021000/021284.png
+2543,5182,Zircon,0,2,/i/021000/021275.png
+2544,5183,Tourmaline,0,2,/i/021000/021293.png
+2545,5184,Amber,0,3,/i/021000/021270.png
+2546,5185,Spinel,0,2,/i/021000/021281.png
+2547,5186,Turquoise,0,2,/i/021000/021271.png
+2548,5193,Pearl,0,6,/i/021000/021273.png
+2549,5196,Jadeite,0,4,/i/021000/021295.png
+2550,5198,Eye of Fire,0,3,/i/021000/021253.png
+2551,5199,Eye of Ice,0,2,/i/021000/021258.png
+2552,5200,Eye of Wind,0,3,/i/021000/021254.png
+2553,5202,Eye of Lightning,0,3,/i/021000/021257.png
+2554,5203,Eye of Water,0,4,/i/021000/021255.png
+2555,5259,Mudstone Whetstone,0,1,/i/021000/021470.png
+2556,5260,Siltstone Whetstone,0,8,/i/021000/021470.png
+2557,5262,Basilisk Whetstone,0,16,/i/021000/021470.png
+2558,7009,Cut Stone,0,109,/i/021000/021470.png
+2559,3616,Boarskin Ringbands,0,6,/i/044000/044816.png
+2560,5276,Hard Leather,0,2,/i/022000/022005.png
+2561,5277,Aldgoat Leather,0,26,/i/022000/022007.png
+2562,5280,Toad Leather,0,9,/i/022000/022001.png
+2563,5284,Peiste Leather,0,36,/i/022000/022024.png
+2564,5285,Raptor Leather,0,53,/i/021000/021823.png
+2565,5287,Uraeus Leather,0,1,/i/021000/021823.png
+2566,5334,Cotton Yarn,0,56,/i/021000/021656.png
+2567,5325,Undyed Cotton Cloth,0,3,/i/021000/021602.png
+2568,5335,Dew Thread,0,26,/i/021000/021657.png
+2569,5336,Linen Yarn,0,250,/i/021000/021659.png
+2570,5327,Undyed Linen,0,79,/i/021000/021605.png
+2571,5337,Woolen Yarn,0,414,/i/021000/021660.png
+2572,5328,Undyed Woolen Cloth,0,151,/i/021000/021606.png
+2573,5522,Natron,0,66,/i/022000/022616.png
+2574,5329,Undyed Felt,0,43,/i/021000/021607.png
+2575,5333,Hempen Yarn,0,2,/i/021000/021658.png
+2576,5515,Beeswax,0,27,/i/022000/022608.png
+2577,7025,Cotton Canvas,0,2,/i/021000/021602.png
+2578,7026,Linen Canvas,0,20,/i/021000/021605.png
+2579,7027,Felt Lining,0,3,/i/021000/021607.png
+2580,5477,Enchanted Silver Ink,0,1,/i/025000/025922.png
+2581,5064,Silver Ingot,0,41,/i/020000/020810.png
+2582,2166,Book of Silver,0,1,/i/033000/033416.png
+2583,4603,Hi-Potion of Mind,0,3,/i/020000/020669.png
+2584,4856,Clove Oil,0,3,/i/025000/025453.png
+2585,5489,Quicksilver,0,23,/i/022000/022612.png
+2586,5470,Growth Formula Alpha,0,1,/i/022000/022606.png
+2587,5472,Growth Formula Gamma,0,18,/i/022000/022606.png
+2588,5478,Enchanted Mythril Ink,0,3,/i/025000/025923.png
+2589,5479,Enchanted Electrum Ink,0,2,/i/025000/025924.png
+2590,5482,Fish Oil,0,1,/i/022000/022636.png
+2591,5486,Shark Oil,0,5,/i/022000/022636.png
+2592,5504,Fish Glue,0,3,/i/022000/022607.png
+2593,5505,Horn Glue,0,14,/i/022000/022607.png
+2594,5510,Rubber,0,11,/i/022000/022638.png
+2595,5512,Clear Glass Lens,0,16,/i/022000/022605.png
+2596,5517,Lanolin,0,3,/i/022000/022609.png
+2597,5476,Enchanted Iron Ink,0,3,/i/025000/025921.png
+2598,6649,Ink & Quill,0,1,/i/052000/052122.png
+2599,7013,Firebricks,0,58,/i/021000/021003.png
+2600,7014,Clinker Bricks,0,3,/i/021000/021003.png
+2601,7015,Roof Tile,0,90,/i/020000/020953.png
+2602,5487,Distilled Water,0,215,/i/022000/022614.png
+2603,7016,Mortar,0,214,/i/027000/027605.png
+2604,7017,Varnish,0,22,/i/022000/022802.png
+2605,12611,Black Firesand,0,3,/i/022000/022604.png
+2606,4847,Table Salt,0,18,/i/025000/025104.png
+2607,4640,Grilled Dodo,0,3,/i/024000/024352.png
+2608,4857,Olive Oil,0,3,/i/025000/025451.png
+2609,4645,Smoked Raptor,0,3,/i/024000/024358.png
+2610,4853,Smooth Butter,0,10,/i/025000/025052.png
+2611,4653,Fried Egg,0,3,/i/024000/024257.png
+2612,4754,Cottage Cheese,0,3,/i/024000/024452.png
+2613,4654,Scrambled Eggs,0,3,/i/024000/024256.png
+2614,4666,Salt Cod,0,3,/i/024000/024315.png
+2615,4684,Spinach Saute,0,3,/i/024000/024152.png
+2616,4826,Sunset Wheat Flour,0,18,/i/025000/025351.png
+2617,4697,Walnut Bread,0,3,/i/024000/024003.png
+2618,4825,Rye Flour,0,3,/i/025000/025356.png
+2619,4850,Honey,0,3,/i/025000/025102.png
+2620,4702,Knight's Bread,0,3,/i/024000/024002.png
+2621,4728,Raisins,0,3,/i/024000/024058.png
+2622,4859,Cider Vinegar,0,5,/i/025000/025106.png
+2623,4852,Sweet Cream,0,6,/i/025000/025056.png
+2624,4756,Cream Cheese,0,3,/i/024000/024455.png
+2625,4757,Rolanberry Cheese,0,3,/i/024000/024456.png
+2626,4849,Maple Syrup,0,3,/i/025000/025105.png
+2627,4848,Maple Sugar,0,3,/i/025000/025103.png
+2628,4858,Lavender Oil,0,3,/i/025000/025452.png
+2629,4861,Pie Dough,0,6,/i/025000/025053.png
+2630,4863,Gelatin,0,5,/i/029000/029001.png
+2631,1920,Mythril Cavalry Bow,0,1,/i/032000/032224.png
+2632,1850,Yarzonshell Harpoon,0,1,/i/031000/031813.png
+2633,2579,Horn Fishing Rod,0,1,/i/038000/038209.png
+2634,2026,Pastoral Oak Cane,0,1,/i/032000/032605.png
+2635,6607,Glade Table,0,1,/i/052000/052221.png
+2636,1855,Mythril Lance,0,1,/i/031000/031826.png
+2637,2041,Vintage Cane,0,1,/i/032000/032604.png
+2638,6377,Riviera House Wall (Wood),0,1,/i/050000/050210.png
+2639,6618,Glade Desk,0,1,/i/052000/052207.png
+2640,5374,Mahogany Lumber,0,1,/i/022000/022462.png
+2641,3870,Oak Pattens,0,1,/i/046000/046213.png
+2642,6368,Oasis House Roof (Wood),0,1,/i/050000/050416.png
+2643,6395,Oasis House Wall (Wood),0,1,/i/050000/050216.png
+2644,27296,Wooden Handrail,0,1,/i/053000/053403.png
+2645,1925,Oak Composite Bow,0,1,/i/032000/032214.png
+2646,2464,Mahogany Spinning Wheel,0,1,/i/035000/035555.png
+2647,2580,Mahogany Fishing Rod,0,1,/i/038000/038210.png
+2648,6387,Glade House Wall (Composite),0,1,/i/050000/050214.png
+2649,6574,Glade Pillar,0,1,/i/052000/052438.png
+2650,12096,Oasis Half Partition,0,1,/i/052000/052566.png
+2651,13078,Mahogany Partition Door,0,1,/i/052000/052581.png
+2652,16935,Grade 1 Picture Frame,0,1,/i/052000/052349.png
+2653,28733,Skybuilders' Wain,0,1,/i/053000/053009.png
+2654,29800,Grade 2 Skybuilders' Crate,0,1,/i/052000/052546.png
+2655,31192,Grade 3 Skybuilders' Crate,0,1,/i/052000/052546.png
+2656,31921,Grade 4 Skybuilders' Crate,0,1,/i/052000/052546.png
+2657,1650,Plumed Oak Macuahuitl,0,1,/i/030000/030424.png
+2658,6352,Riviera House Roof (Stone),0,1,/i/050000/050412.png
+2659,6617,Oasis Desk,0,1,/i/052000/052208.png
+2660,6629,Oasis Stall,0,1,/i/052000/052214.png
+2661,2030,Sprouting Rosewood Radical,0,1,/i/032000/032644.png
+2662,23884,Mahogany Bunk Bed,0,1,/i/052000/052647.png
+2663,2413,Garnet Grinding Wheel,0,1,/i/035000/035354.png
+2664,2289,Vintage Round Shield,0,1,/i/030000/030026.png
+2665,7976,Model Star Globe,0,1,/i/052000/052520.png
+2666,9736,Royal Partition,0,1,/i/052000/052553.png
+2667,23891,Mounted Plate Rack,0,1,/i/052000/052385.png
+2668,1862,Cobalt Halberd,0,1,/i/031000/031846.png
+2669,2039,Jade Crook,0,1,/i/032000/032617.png
+2670,6567,Glade Bookshelf,0,1,/i/052000/052420.png
+2671,8786,Riviera Stool,0,1,/i/052000/052537.png
+2672,2581,Rosewood Fishing Rod,0,1,/i/038000/038210.png
+2673,5376,Rosewood Lumber,0,1,/i/022000/022464.png
+2674,1932,Cobalt Cavalry Bow,0,1,/i/032000/032225.png
+2675,2287,Eagle-crested Round Shield,0,1,/i/030000/030033.png
+2676,2465,Rosewood Spinning Wheel,0,1,/i/035000/035552.png
+2677,1871,Vintage Guisarme,0,1,/i/031000/031817.png
+2678,6521,Knight Captain's Chair,0,1,/i/052000/052450.png
+2679,6568,Oasis Bookshelf,0,1,/i/052000/052421.png
+2680,7993,Lattice Planter,0,1,/i/053000/053059.png
+2681,8787,Glade Stool,0,1,/i/052000/052538.png
+2682,15974,Mounted Bookshelf,0,1,/i/052000/052595.png
+2683,24511,Wooden Loft,0,1,/i/052000/052388.png
+2684,24512,Wooden Steps,0,1,/i/052000/052390.png
+2685,24513,Wooden Beam,0,1,/i/052000/052393.png
+2686,24539,Black-and-white Interior Wall,0,1,/i/051000/051244.png
+2687,2424,Steel Round Knife,0,1,/i/035000/035405.png
+2688,2335,Wrapped Steel Claw Hammer,0,1,/i/035000/035053.png
+2689,2437,Wrapped Steel Awl,0,1,/i/035000/035454.png
+2690,1639,Steel Longsword,0,1,/i/030000/030435.png
+2691,2528,Plumed Mythril Pickaxe,0,1,/i/038000/038009.png
+2692,1643,Mythril Broadsword,0,1,/i/030000/030500.png
+2693,2554,Mythril Hatchet,0,1,/i/038000/038108.png
+2694,2375,Steel Raising Hammer,0,1,/i/035000/035058.png
+2695,2350,Wrapped Crowsbeak Hammer,0,1,/i/035000/035109.png
+2696,1648,Vintage Viking Sword,0,1,/i/030000/030496.png
+2697,8666,Mythril Knives,0,1,/i/033000/033825.png
+2698,10402,Mythril Claymore,0,1,/i/034000/034208.png
+2699,10464,Mythril-barreled Carbine,0,1,/i/034000/034610.png
+2700,1781,Spiked Mythril Labrys,0,1,/i/031000/031423.png
+2701,1711,Mythril Claws,0,1,/i/031000/031020.png
+2702,2425,Mythril Head Knife,0,1,/i/035000/035407.png
+2703,2323,Mythril Saw,0,1,/i/035000/035008.png
+2704,2400,Mythril Ornamental Hammer,0,1,/i/035000/035307.png
+2705,1786,Mythril Bhuj,0,1,/i/031000/031448.png
+2706,2439,Mythril Awl,0,1,/i/035000/035455.png
+2707,2337,Mythril Claw Hammer,0,1,/i/035000/035054.png
+2708,2363,Mythril File,0,1,/i/035000/035154.png
+2709,28734,Skybuilders' Nails,0,1,/i/021000/021004.png
+2710,29801,Grade 2 Skybuilders' Nails,0,1,/i/021000/021004.png
+2711,31193,Grade 3 Skybuilders' Nails,0,1,/i/021000/021008.png
+2712,31922,Grade 4 Skybuilders' Nails,0,1,/i/021000/021009.png
+2713,2516,Mythril Culinary Knife,0,1,/i/035000/035753.png
+2714,2568,Mythril Scythe,0,1,/i/038000/038153.png
+2715,2490,Mythril Mortar,0,1,/i/035000/035653.png
+2716,2542,Mythril Sledgehammer,0,1,/i/038000/038054.png
+2717,6630,Riviera Counter,0,1,/i/052000/052209.png
+2718,9209,Mythril Baselards,0,1,/i/033000/033829.png
+2719,10403,Mythril Zweihander,0,1,/i/034000/034255.png
+2720,10465,Mythril-barreled Musketoon,0,1,/i/034000/034646.png
+2721,5059,Cobalt Ingot,0,1,/i/020000/020802.png
+2722,2388,Mythril Pliers,0,1,/i/035000/035253.png
+2723,1657,Cobalt Katzbalger,0,1,/i/030000/030407.png
+2724,1723,Cobalt Knuckles,0,1,/i/031000/031018.png
+2725,2324,Mythril Chocobotail Saw,0,1,/i/035000/035011.png
+2726,2426,Mythril Round Knife,0,1,/i/035000/035410.png
+2727,2401,Mythril Lapidary Hammer,0,1,/i/035000/035211.png
+2728,1642,Goblin Scimitar,0,1,/i/030000/030426.png
+2729,2351,Cobalt Cross-pein Hammer,0,1,/i/035000/035108.png
+2730,6426,Apkallu Weathervane,0,1,/i/050000/050502.png
+2731,5094,Cobalt Rivets,0,1,/i/021000/021003.png
+2732,1659,Cobalt Shamshir,0,1,/i/030000/030453.png
+2733,1796,Buccaneer's Bardiche,0,1,/i/031000/031426.png
+2734,2376,Cobalt Doming Hammer,0,1,/i/035000/035207.png
+2735,2555,Cobalt Hatchet,0,1,/i/038000/038102.png
+2736,2529,Cobalt Dolabra,0,1,/i/038000/038005.png
+2737,2440,Cobalt Awl,0,1,/i/035000/035454.png
+2738,2517,Cobalt Culinary Knife,0,1,/i/035000/035754.png
+2739,2389,Cobalt Pliers,0,1,/i/035000/035255.png
+2740,2543,Cobalt Sledgehammer,0,1,/i/038000/038053.png
+2741,2338,Cobalt Claw Hammer,0,1,/i/035000/035053.png
+2742,7020,Cobalt Nails,0,1,/i/021000/021008.png
+2743,1801,Demilune Bhuj,0,1,/i/031000/031447.png
+2744,2352,Wrapped Hawksbeak Hammer,0,1,/i/035000/035109.png
+2745,1649,Goblin Longsword,0,1,/i/030000/030429.png
+2746,2364,Cobalt File,0,1,/i/035000/035153.png
+2747,2569,Cobalt Scythe,0,1,/i/038000/038155.png
+2748,2491,Cobalt Mortar,0,1,/i/035000/035655.png
+2749,6505,Cannonballs,0,1,/i/053000/053034.png
+2750,6506,Stone Vigil Beacon,0,1,/i/053000/053035.png
+2751,6585,Oasis Floor Lamp,0,1,/i/052000/052470.png
+2752,8667,Mythril Pugiones,0,1,/i/033000/033834.png
+2753,10404,Cobalt Claymore,0,1,/i/034000/034204.png
+2754,10466,Cobalt-barreled Carbine,0,1,/i/034000/034608.png
+2755,5065,Mythril Ingot,0,1,/i/020000/020811.png
+2756,2502,Steel Frypan,0,1,/i/035000/035709.png
+2757,6435,Glade Wall Chimney,0,1,/i/050000/050308.png
+2758,5089,Mythril Rings,0,1,/i/020000/020913.png
+2759,5099,Mythril Rivets,0,1,/i/021000/021003.png
+2760,2268,Bladed Lantern Shield,0,1,/i/030000/030041.png
+2761,3850,Horn Scale Greaves,0,1,/i/046000/046884.png
+2762,5079,Mythril Plate,0,1,/i/020000/020956.png
+2763,3622,Horn Scale Fingers,0,1,/i/044000/044591.png
+2764,2812,Mythril Celata,0,1,/i/040000/040122.png
+2765,4034,Mythril Plate Belt,0,1,/i/047000/047278.png
+2766,2757,Vintage Celata,0,1,/i/040000/040001.png
+2767,6670,Belah'dian Crystal Lantern,0,1,/i/052000/052306.png
+2768,3628,Mythril Gauntlets,0,1,/i/044000/044592.png
+2769,3149,Mythril Cuirass,0,1,/i/042000/042833.png
+2770,3854,Mythril Sabatons,0,1,/i/046000/046885.png
+2771,6485,Mythril Table,0,1,/i/053000/053028.png
+2772,3142,Horn Scale Mail,0,1,/i/043000/043083.png
+2773,2802,Mythril Elmo,0,1,/i/040000/040045.png
+2774,2476,Mythril Alembic,0,1,/i/035000/035608.png
+2775,2278,Vintage Scutum,0,1,/i/030000/030028.png
+2776,27656,Altered Mythril Elmo,0,1,/i/041000/041541.png
+2777,28735,Skybuilders' Rivets,0,1,/i/021000/021014.png
+2778,29802,Grade 2 Skybuilders' Rivets,0,1,/i/021000/021014.png
+2779,31194,Grade 3 Skybuilders' Rivets,0,1,/i/021000/021014.png
+2780,31923,Grade 4 Skybuilders' Rivets,0,1,/i/021000/021014.png
+2781,3858,Mythril-plated Jackboots,0,1,/i/046000/046841.png
+2782,2817,Mythril Barbut,0,1,/i/040000/040043.png
+2783,3623,Mythril Vambraces,0,1,/i/044000/044536.png
+2784,3164,Vintage Scale Mail,0,1,/i/043000/043067.png
+2785,6441,Glade Hanging Placard,0,1,/i/050000/050005.png
+2786,3861,Mythril-plated Caligae,0,1,/i/046000/046024.png
+2787,2819,Mythril Mesail,0,1,/i/041000/041211.png
+2788,3868,Mythril Sollerets,0,1,/i/046000/046839.png
+2789,2827,Mythril Chain Coif,0,1,/i/040000/040050.png
+2790,3174,Mythril Haubergeon,0,1,/i/043000/043086.png
+2791,2477,Electrum Alembic,0,1,/i/035000/035602.png
+2792,5074,Cobalt Plate,0,1,/i/020000/020952.png
+2793,5084,Cobalt Rings,0,1,/i/020000/020911.png
+2794,3642,Mythril Mitt Gauntlets,0,1,/i/044000/044534.png
+2795,2503,Cobalt Skillet,0,1,/i/035000/035710.png
+2796,4047,High Mythril Plate Belt,0,1,/i/047000/047278.png
+2797,2264,Vintage Buckler,0,1,/i/030000/030004.png
+2798,3649,High Mythril Gauntlets,0,1,/i/044000/044589.png
+2799,3431,High Mythril Flanchard,0,1,/i/045000/045352.png
+2800,6440,Riviera Hanging Placard,0,1,/i/050000/050004.png
+2801,2830,Reinforced Mythril Elmo,0,1,/i/040000/040046.png
+2802,3654,Cobalt Vambraces,0,1,/i/044000/044537.png
+2803,2279,Cobalt Scutum,0,1,/i/030000/030073.png
+2804,3180,High Mythril Armor,0,1,/i/042000/042831.png
+2805,7023,Cobalt Joint Plate,0,1,/i/021000/021003.png
+2806,27657,Altered Mythril Chain Coif,0,1,/i/040000/040051.png
+2807,27658,Altered High Mythril Armor,0,1,/i/042000/042997.png
+2808,3883,Cobalt-plated Jackboots,0,1,/i/046000/046842.png
+2809,2850,Cobalt Elmo,0,1,/i/040000/040047.png
+2810,3183,Tortoiseshell Scale Mail,0,1,/i/043000/043084.png
+2811,2300,Vintage Kite Shield,0,1,/i/030000/030034.png
+2812,3886,Tortoiseshell Scale Greaves,0,1,/i/046000/046881.png
+2813,3669,Tortoiseshell Scale Fingers,0,1,/i/044000/044587.png
+2814,6422,Glade Rounded Chimney,0,1,/i/050000/050507.png
+2815,6475,Moogle Letter Box,0,1,/i/053000/053018.png
+2816,27659,Altered Cobalt Elmo,0,1,/i/041000/041542.png
+2817,4337,Wolf Necklace,0,1,/i/048000/048330.png
+2818,2450,Mythril Needle,0,1,/i/035000/035505.png
+2819,4465,Mythril Ring,0,1,/i/048000/048005.png
+2820,5193,Pearl,0,1,/i/021000/021273.png
+2821,4467,Mythril Ring of Crafting,0,1,/i/048000/048005.png
+2822,2623,Wildfowl Fly,0,3,/i/027000/027059.png
+2823,6378,Riviera House Wall (Composite),0,1,/i/050000/050211.png
+2824,6397,Oasis House Wall (Stone),0,1,/i/050000/050218.png
+2825,6434,Riviera Wall Chimney,0,1,/i/050000/050307.png
+2826,6436,Oasis Wall Chimney,0,1,/i/050000/050309.png
+2827,4349,Aquamarine Choker,0,1,/i/048000/048316.png
+2828,4347,Amethyst Choker,0,1,/i/048000/048320.png
+2829,4339,Garnet Choker,0,1,/i/048000/048315.png
+2830,4341,Goshenite Choker,0,1,/i/048000/048319.png
+2831,4345,Heliodor Choker,0,1,/i/048000/048318.png
+2832,4343,Peridot Choker,0,1,/i/048000/048317.png
+2833,4351,Pearl Choker,0,1,/i/048000/048327.png
+2834,6420,Riviera Stone Chimney,0,1,/i/050000/050505.png
+2835,6573,Riviera Pillar,0,1,/i/052000/052437.png
+2836,4143,Aquamarine Bracelet,0,1,/i/048000/048818.png
+2837,4141,Amethyst Bracelet,0,1,/i/048000/048822.png
+2838,4133,Garnet Bracelet,0,1,/i/048000/048817.png
+2839,4135,Goshenite Bracelet,0,1,/i/048000/048821.png
+2840,4139,Heliodor Bracelet,0,1,/i/048000/048820.png
+2841,4137,Peridot Bracelet,0,1,/i/048000/048819.png
+2842,4145,Pearl Bracelet,0,1,/i/048000/048829.png
+2843,6369,Oasis House Roof (Composite),0,1,/i/050000/050417.png
+2844,6388,Glade House Wall (Stone),0,1,/i/050000/050215.png
+2845,6396,Oasis House Wall (Composite),0,1,/i/050000/050217.png
+2846,10526,Mythril Star Globe,0,1,/i/034000/034811.png
+2847,4243,Aquamarine Earrings,0,1,/i/048000/048517.png
+2848,4478,Aquamarine Ring,0,1,/i/048000/048016.png
+2849,4241,Amethyst Earrings,0,1,/i/048000/048521.png
+2850,4476,Amethyst Ring,0,1,/i/048000/048020.png
+2851,4233,Garnet Earrings,0,1,/i/048000/048516.png
+2852,4468,Garnet Ring,0,1,/i/048000/048015.png
+2853,4235,Goshenite Earrings,0,1,/i/048000/048520.png
+2854,4470,Goshenite Ring,0,1,/i/048000/048019.png
+2855,2620,Spinner,0,3,/i/027000/027062.png
+2856,6379,Riviera House Wall (Stone),0,1,/i/050000/050212.png
+2857,6575,Oasis Pillar,0,1,/i/052000/052439.png
+2858,7086,Ahriman Vase,0,1,/i/052000/052126.png
+2859,5196,Jadeite,0,1,/i/021000/021295.png
+2860,5262,Basilisk Whetstone,0,1,/i/021000/021470.png
+2861,4239,Heliodor Earrings,0,1,/i/048000/048519.png
+2862,4474,Heliodor Ring,0,1,/i/048000/048018.png
+2863,4237,Peridot Earrings,0,1,/i/048000/048518.png
+2864,4472,Peridot Ring,0,1,/i/048000/048017.png
+2865,4147,Red Coral Armillae,0,1,/i/048000/048834.png
+2866,2619,Heavy Steel Jig,0,3,/i/027000/027065.png
+2867,9298,Classic Spectacles,0,1,/i/041000/041360.png
+2868,10049,Oval Reading Glasses,0,1,/i/041000/041365.png
+2869,9770,Oasis Cobble Flooring,0,1,/i/051000/051022.png
+2870,27674,Altered Mythril Magnifiers,0,1,/i/041000/041326.png
+2871,27297,Misplaced Eyeglasses,0,1,/i/052000/052999.png
+2872,28736,Skybuilders' Rings,0,1,/i/020000/020911.png
+2873,29803,Grade 2 Skybuilders' Rings,0,1,/i/020000/020911.png
+2874,31195,Grade 3 Skybuilders' Rings,0,1,/i/020000/020910.png
+2875,31924,Grade 4 Skybuilders' Rings,0,1,/i/020000/020912.png
+2876,5184,Amber,0,1,/i/021000/021270.png
+2877,5182,Zircon,0,1,/i/021000/021275.png
+2878,5185,Spinel,0,1,/i/021000/021281.png
+2879,5186,Turquoise,0,1,/i/021000/021271.png
+2880,5183,Tourmaline,0,1,/i/021000/021293.png
+2881,5181,Rubellite,0,1,/i/021000/021284.png
+2882,2125,Horn Staff,0,1,/i/033000/033003.png
+2883,4245,Pearl Earrings,0,1,/i/048000/048528.png
+2884,4480,Pearl Ring,0,1,/i/048000/048027.png
+2885,4353,Mythril Choker,0,1,/i/048000/048305.png
+2886,4247,Mythril Ear Cuffs,0,1,/i/048000/048505.png
+2887,2622,Mythril Spoon Lure,0,3,/i/027000/027066.png
+2888,6424,Oasis Rounded Chimney,0,1,/i/050000/050509.png
+2889,10527,Mythril Planisphere,0,1,/i/034000/034830.png
+2890,5066,Electrum Ingot,0,1,/i/020000/020812.png
+2891,2796,Mythril Circlet (Amber),0,1,/i/041000/041033.png
+2892,2792,Mythril Circlet (Zircon),0,1,/i/041000/041036.png
+2893,2798,Mythril Circlet (Spinel),0,1,/i/041000/041035.png
+2894,2800,Mythril Circlet (Turquoise),0,1,/i/041000/041032.png
+2895,2794,Mythril Circlet (Tourmaline),0,1,/i/041000/041034.png
+2896,2790,Mythril Circlet (Rubellite),0,1,/i/041000/041031.png
+2897,1716,Tortoiseshell Hora,0,1,/i/031000/031006.png
+2898,2083,Lightning Brand,0,1,/i/032000/032810.png
+2899,2451,Wolf Fang Needle,0,1,/i/035000/035509.png
+2900,6518,Sylphic Chair,0,1,/i/052000/052448.png
+2901,6581,Sylphic Screen,0,1,/i/052000/052423.png
+2902,6609,Sylphic Table,0,1,/i/052000/052223.png
+2903,6651,Gemscope,0,1,/i/052000/052119.png
+2904,5090,Electrum Rings,0,1,/i/020000/020915.png
+2905,2088,Electrum Scepter,0,1,/i/032000/032805.png
+2906,2452,Thousand Needle,0,1,/i/035000/035508.png
+2907,4485,Red Coral Ring,0,1,/i/048000/048034.png
+2908,4254,Red Coral Earrings,0,1,/i/048000/048535.png
+2909,2094,Water Brand,0,1,/i/032000/032815.png
+2910,4361,Electrum Gorget,0,1,/i/048000/048304.png
+2911,4150,Electrum Wristlets,0,1,/i/048000/048804.png
+2912,2618,Snurble Fly,0,3,/i/027000/027058.png
+2913,6453,Oasis Stone Wall,0,1,/i/050000/050610.png
+2914,6565,Sylphic Cupboard,0,1,/i/052000/052410.png
+2915,6571,Sylphic Bookshelf,0,1,/i/052000/052416.png
+2916,6667,Sylphic Wall Lantern,0,1,/i/052000/052305.png
+2917,4255,Electrum Earrings,0,1,/i/048000/048504.png
+2918,4497,Electrum Ring,0,1,/i/048000/048004.png
+2919,4152,Electrum Wristlets of Crafting,0,1,/i/048000/048804.png
+2920,2834,Cobalt Preserves,0,1,/i/041000/041337.png
+2921,2624,Topwater Frog,0,3,/i/027000/027054.png
+2922,2130,Black Horn Staff,0,1,/i/033000/033023.png
+2923,6614,Sylphic Dining Table,0,1,/i/052000/052224.png
+2924,6633,Sylphic Counter,0,1,/i/052000/052215.png
+2925,5194,Black Pearl,0,1,/i/021000/021274.png
+2926,2857,Electrum Monocle,0,1,/i/041000/041331.png
+2927,4363,Red Coral Necklace,0,1,/i/048000/048332.png
+2928,4371,Amber Choker,0,1,/i/048000/048324.png
+2929,2876,Electrum Circlet (Amber),0,1,/i/041000/041027.png
+2930,2872,Electrum Circlet (Zircon),0,1,/i/041000/041030.png
+2931,2878,Electrum Circlet (Spinel),0,1,/i/041000/041029.png
+2932,2880,Electrum Circlet (Turquoise),0,1,/i/041000/041026.png
+2933,2874,Electrum Circlet (Tourmaline),0,1,/i/041000/041028.png
+2934,2870,Electrum Circlet (Rubellite),0,1,/i/041000/041025.png
+2935,4501,Electrum Ring of Crafting,0,1,/i/048000/048004.png
+2936,1732,Vintage Hora,0,1,/i/031000/031060.png
+2937,6447,Riviera Picket Wall,0,1,/i/050000/050602.png
+2938,10528,Electrum Star Globe,0,1,/i/034000/034809.png
+2939,3616,Boarskin Ringbands,0,1,/i/044000/044816.png
+2940,4130,Boarskin Wristbands,0,1,/i/048000/048836.png
+2941,4132,Boarskin Wristbands of Gathering,0,1,/i/048000/048836.png
+2942,6445,Oasis Banner,0,1,/i/050000/050009.png
+2943,3402,Boarskin Subligar,0,1,/i/045000/045173.png
+2944,3138,Boarskin Harness,0,1,/i/043000/043079.png
+2945,2788,Boarskin Pot Helm,0,1,/i/040000/040048.png
+2946,4032,Boarskin Shepherd's Belt,0,1,/i/047000/047242.png
+2947,4018,Vintage Chef's Belt,0,1,/i/047000/047252.png
+2948,27641,Altered Boarskin Pot Helm,0,1,/i/041000/041551.png
+2949,5284,Peiste Leather,0,1,/i/022000/022024.png
+2950,3851,Peisteskin Crakows,0,1,/i/046000/046218.png
+2951,3853,Peisteskin Crakows of Gathering,0,1,/i/046000/046218.png
+2952,3625,Fingerless Peisteskin Gloves,0,1,/i/044000/044102.png
+2953,3405,Boarskin Breeches,0,1,/i/045000/045354.png
+2954,6631,Glade Counter,0,1,/i/052000/052210.png
+2955,3627,Fingerless Peisteskin Gloves of Gathering,0,1,/i/044000/044102.png
+2956,3860,Boarskin Thighboots,0,1,/i/046000/046101.png
+2957,3165,Peisteskin Harness,0,1,/i/043000/043080.png
+2958,4482,Boarskin Ring,0,1,/i/048000/048083.png
+2959,3691,Vintage Smithy's Gloves,0,1,/i/044000/044006.png
+2960,9749,Retainer Counter,0,1,/i/053000/053093.png
+2961,3639,Boarskin Smithy's Gloves,0,1,/i/044000/044025.png
+2962,4039,Peisteskin Hunting Belt,0,1,/i/047000/047238.png
+2963,4038,Boarskin Tool Belt,0,1,/i/047000/047231.png
+2964,4044,Boarskin Survival Belt,0,1,/i/047000/047249.png
+2965,3856,Boarskin Duckbills,0,1,/i/046000/046331.png
+2966,6444,Glade Banner,0,1,/i/050000/050008.png
+2967,6682,Sheep Rug,0,1,/i/052000/052002.png
+2968,6981,Highland Boots,0,1,/i/046000/046381.png
+2969,6978,Highland Hood,0,1,/i/040000/040392.png
+2970,6980,Highland Mitts,0,1,/i/044000/044233.png
+2971,6979,Highland Smock,0,1,/i/042000/042352.png
+2972,12081,Highland Barding,0,1,/i/049000/049116.png
+2973,28737,Skybuilders' Leather Straps,0,1,/i/022000/022030.png
+2974,29804,Grade 2 Skybuilders' Leather Straps,0,1,/i/022000/022030.png
+2975,31196,Grade 3 Skybuilders' Leather Straps,0,1,/i/022000/022030.png
+2976,31925,Grade 4 Skybuilders' Leather Straps,0,1,/i/022000/022030.png
+2977,3416,Peisteskin Subligar,0,1,/i/045000/045174.png
+2978,3426,Boarskin Culottes,0,1,/i/045000/045169.png
+2979,4045,Boarskin Belt,0,1,/i/047000/047239.png
+2980,3423,Boarskin Skirt,0,1,/i/045000/045181.png
+2981,3866,Boarskin Moccasins,0,1,/i/046000/046216.png
+2982,5285,Raptor Leather,0,1,/i/021000/021823.png
+2983,3911,Vintage Thighboots,0,1,/i/046000/046102.png
+2984,6675,Riviera Oval Rug,0,1,/i/052000/052006.png
+2985,3871,Boarskin Workboots,0,1,/i/046000/046214.png
+2986,2270,Raptorskin Targe,0,1,/i/030000/030010.png
+2987,3177,Boarskin Jerkin,0,1,/i/042000/042222.png
+2988,4049,Raptorskin Satchel Belt,0,1,/i/047000/047236.png
+2989,4360,Raptorskin Choker,0,1,/i/048000/048336.png
+2990,3662,Boarskin Ringbands of Tremors,0,1,/i/044000/044131.png
+2991,3658,Boarskin Ringbands of Frost,0,1,/i/044000/044132.png
+2992,3660,Boarskin Ringbands of Gales,0,1,/i/044000/044133.png
+2993,3666,Boarskin Ringbands of Tides,0,1,/i/044000/044134.png
+2994,3656,Boarskin Ringbands of Flames,0,1,/i/044000/044135.png
+2995,3664,Boarskin Ringbands of Storms,0,1,/i/044000/044136.png
+2996,3651,Fingerless Raptorskin Gloves,0,1,/i/044000/044103.png
+2997,2915,Silver Tricorne,0,1,/i/040000/040605.png
+2998,3653,Fingerless Raptorskin Gloves of Gathering,0,1,/i/044000/044103.png
+2999,1728,Peisteskin Cesti,0,1,/i/031000/031011.png
+3000,4051,Raptorskin Artisan's Belt,0,1,/i/047000/047254.png
+3001,3447,Raptorskin Subligar,0,1,/i/045000/045175.png
+3002,3191,Raptorskin Harness,0,1,/i/043000/043081.png
+3003,3668,Raptorskin Smithy's Gloves,0,1,/i/044000/044006.png
+3004,4052,Peisteskin Belt,0,1,/i/047000/047224.png
+3005,3443,Raptorskin Breeches,0,1,/i/045000/045355.png
+3006,6443,Riviera Banner,0,1,/i/050000/050007.png
+3007,6678,Glade Blossom Rug,0,1,/i/052000/052009.png
+3008,4153,Raptorskin Wristbands,0,1,/i/048000/048841.png
+3009,2862,Raptorskin Pot Helm,0,1,/i/040000/040049.png
+3010,3457,Raptorskin Culottes,0,1,/i/045000/045170.png
+3011,4056,Raptorskin Survival Belt,0,1,/i/047000/047237.png
+3012,3909,Raptorskin Workboots,0,1,/i/046000/046215.png
+3013,4155,Raptorskin Wristbands of Gathering,0,1,/i/048000/048841.png
+3014,4057,Raptorskin Merchant's Purse,0,1,/i/047000/047229.png
+3015,3694,Raptorskin Armguards,0,1,/i/044000/044165.png
+3016,17465,Raptorskin Shoes,0,1,/i/046000/046676.png
+3017,27647,Raptorskin Moccasins,0,1,/i/047000/047670.png
+3018,27650,Raptorskin Gloves,0,1,/i/049000/049436.png
+3019,2778,Angler's Hat,0,1,/i/040000/040624.png
+3020,3399,Linen Trousers,0,1,/i/045000/045184.png
+3021,3140,Linen Cowl,0,1,/i/043000/043521.png
+3022,4030,Linen Longsash,0,1,/i/047000/047408.png
+3023,7026,Linen Canvas,0,1,/i/021000/021605.png
+3024,24522,Prism Pouch,0,1,/i/052000/052961.png
+3025,27673,Altered Linen Cowl,0,1,/i/043000/043889.png
+3026,2804,Linen Wedge Cap of Crafting,0,1,/i/040000/040606.png
+3027,4033,Linen Half Apron,0,1,/i/047000/047255.png
+3028,3849,Linen Gaiters,0,1,/i/046000/046338.png
+3029,3404,Linen Bottoms,0,1,/i/045000/045310.png
+3030,3076,Vintage Coatee,0,1,/i/042000/042206.png
+3031,6673,Riviera Rug,0,1,/i/052000/052007.png
+3032,6677,Glade Fringed Rug,0,1,/i/052000/052010.png
+3033,6679,Oasis Rug,0,1,/i/052000/052012.png
+3034,5337,Woolen Yarn,0,2,/i/021000/021660.png
+3035,2805,Linen Wedge Cap of Gathering,0,1,/i/040000/040606.png
+3036,3144,Linen Coatee of Crafting,0,1,/i/042000/042312.png
+3037,3145,Linen Coatee of Gathering,0,1,/i/042000/042312.png
+3038,3621,Linen Shortgloves,0,1,/i/044000/044171.png
+3039,3105,Vintage Doublet Vest,0,1,/i/042000/042124.png
+3040,6361,Glade House Roof (Stone),0,1,/i/050000/050415.png
+3041,5328,Undyed Woolen Cloth,0,1,/i/021000/021606.png
+3042,2806,Woolen Coif,0,1,/i/040000/040372.png
+3043,3147,Woolen Shirt,0,1,/i/042000/042228.png
+3044,2810,Woolen Turban,0,1,/i/040000/040376.png
+3045,4036,Woolen Sash,0,1,/i/047000/047421.png
+3046,3407,Linen Gaskins,0,1,/i/045000/045358.png
+3047,3411,Padded Linen Trousers,0,1,/i/045000/045184.png
+3048,3146,Linen Bliaud,0,1,/i/042000/042339.png
+3049,6482,Linen Parasol,0,1,/i/053000/053025.png
+3050,24525,Red Carpet,0,1,/i/052000/052029.png
+3051,27642,Altered Woolen Shirt,0,1,/i/043000/043441.png
+3052,2808,Woolen Coif of Gathering,0,1,/i/040000/040372.png
+3053,3408,Woolen Sarouel,0,1,/i/045000/045180.png
+3054,3410,Woolen Sarouel of Gathering,0,1,/i/045000/045180.png
+3055,2814,Woolen Hat,0,1,/i/040000/040529.png
+3056,2816,Linen Deerstalker,0,1,/i/040000/040631.png
+3057,3137,Vintage Chef's Apron,0,1,/i/042000/042183.png
+3058,6431,Glade Awning,0,1,/i/050000/050304.png
+3059,6676,Glade Rug,0,1,/i/052000/052008.png
+3060,7085,Stuffed Ahriman,0,1,/i/052000/052127.png
+3061,7983,Riviera Doormat,0,1,/i/052000/052020.png
+3062,13257,Red Beret,0,1,/i/040000/040791.png
+3063,28738,Skybuilders' Cloth,0,1,/i/021000/021611.png
+3064,29805,Grade 2 Skybuilders' Cloth,0,1,/i/021000/021613.png
+3065,31197,Grade 3 Skybuilders' Cloth,0,1,/i/021000/021613.png
+3066,31926,Grade 4 Skybuilders' Cloth,0,1,/i/021000/021611.png
+3067,3413,Woolen Tights,0,1,/i/045000/045172.png
+3068,3160,Woolen Robe,0,1,/i/042000/042064.png
+3069,3162,Linen Smock,0,1,/i/042000/042231.png
+3070,3640,Woolen Dress Gloves,0,1,/i/044000/044198.png
+3071,2785,Vintage Chef's Hat,0,1,/i/040000/040577.png
+3072,8007,Riviera Flora Interior Wall,0,1,/i/051000/051214.png
+3073,8008,Glade Flora Interior Wall,0,1,/i/051000/051215.png
+3074,8009,Oasis Flora Interior Wall,0,1,/i/051000/051216.png
+3075,13258,Green Beret,0,1,/i/040000/040792.png
+3076,27675,Altered Woolen Gown,0,1,/i/042000/042220.png
+3077,27676,Altered Woolen Chausses,0,1,/i/045000/045060.png
+3078,3415,Linen Slops,0,1,/i/045000/045165.png
+3079,3163,Linen Doublet,0,1,/i/042000/042011.png
+3080,3425,Woolen Chausses,0,1,/i/045000/045167.png
+3081,2829,Woolen Beret,0,1,/i/040000/040622.png
+3082,2825,Ranger's Hat,0,1,/i/040000/040626.png
+3083,3176,Woolen Gown,0,1,/i/042000/042220.png
+3084,3421,Woolen Kecks,0,1,/i/045000/045176.png
+3085,3645,Woolen Bracers,0,1,/i/044000/044099.png
+3086,3172,Ranger's Tunic,0,1,/i/042000/042224.png
+3087,3429,Woolen Gaskins,0,1,/i/045000/045182.png
+3088,2832,Woolen Cavalier's Hat,0,1,/i/040000/040628.png
+3089,3881,Woolen Dress Shoes,0,1,/i/046000/046357.png
+3090,7027,Felt Lining,0,1,/i/021000/021607.png
+3091,6525,Oasis Bench,0,1,/i/052000/052460.png
+3092,6529,Riviera Armchair,0,1,/i/052000/052406.png
+3093,8813,Glade Doormat,0,1,/i/052000/052021.png
+3094,13259,White Beret,0,1,/i/040000/040793.png
+3095,27643,Altered Woolen Hat,0,1,/i/040000/040555.png
+3096,27644,Woolen Tunic,0,1,/i/043000/043468.png
+3097,27645,Altered Woolen Bracers,0,1,/i/044000/044054.png
+3098,3647,Woolen Halfgloves,0,1,/i/044000/044095.png
+3099,3648,Woolen Work Gloves,0,1,/i/044000/044097.png
+3100,3427,Woolen Trousers,0,1,/i/045000/045185.png
+3101,3178,Woolen Bliaud,0,1,/i/042000/042229.png
+3102,5329,Undyed Felt,0,1,/i/021000/021607.png
+3103,2835,Felt Coif,0,1,/i/040000/040373.png
+3104,3406,Vintage Hose,0,1,/i/045000/045132.png
+3105,27646,Altered Woolen Trousers,0,1,/i/049000/049682.png
+3106,2837,Felt Coif of Gathering,0,1,/i/040000/040373.png
+3107,3187,Woolen Smock,0,1,/i/042000/042232.png
+3108,2854,Woolen Deerstalker,0,1,/i/040000/040632.png
+3109,3188,Woolen Doublet,0,1,/i/042000/042219.png
+3110,2852,Felt Hat,0,1,/i/040000/040530.png
+3111,3185,Felt Robe,0,1,/i/042000/042065.png
+3112,3442,Woolen Slops,0,1,/i/045000/045166.png
+3113,3182,Vintage Seneschal Coatee,0,1,/i/042000/042204.png
+3114,6433,Oasis Awning,0,1,/i/050000/050306.png
+3115,6450,Glade Thatch Wall,0,1,/i/050000/050606.png
+3116,6532,Riviera Couch,0,1,/i/052000/052403.png
+3117,3193,Woolen Cowl,0,1,/i/043000/043522.png
+3118,3456,Felt Chausses,0,1,/i/045000/045168.png
+3119,3201,Rainmaker's Tunic,0,1,/i/042000/042225.png
+3120,2882,Rainmaker's Hat,0,1,/i/040000/040627.png
+3121,3205,Felt Gown,0,1,/i/042000/042221.png
+3122,3454,Felt Kecks,0,1,/i/045000/045177.png
+3123,3680,Felt Halfgloves,0,1,/i/044000/044096.png
+3124,2855,Vintage Jester's Cap,0,1,/i/040000/040574.png
+3125,4063,Felt Sash,0,1,/i/047000/047403.png
+3126,6531,Oasis Armchair,0,1,/i/052000/052408.png
+3127,6683,Goobbue Rug,0,1,/i/052000/052001.png
+3128,8011,Striped Interior Wall,0,1,/i/051000/051218.png
+3129,8814,Oasis Doormat,0,1,/i/052000/052022.png
+3130,13256,Flat Cap,0,1,/i/040000/040790.png
+3131,17462,Wool Knit Cap,0,1,/i/040000/040850.png
+3132,17463,Wool Suspenders,0,1,/i/043000/043652.png
+3133,17464,Cropped Wool Slops,0,1,/i/045000/045863.png
+3134,24538,Teal Blue Carpeting,0,1,/i/051000/051038.png
+3135,27677,Altered Woolen Cowl,0,1,/i/043000/043906.png
+3136,4580,Blinding Potion,0,3,/i/020000/020685.png
+3137,4582,Sleeping Potion,0,3,/i/020000/020683.png
+3138,6350,Riviera House Roof (Wood),0,1,/i/050000/050410.png
+3139,4581,Silencing Potion,0,3,/i/020000/020684.png
+3140,6483,Lotus Parasol,0,1,/i/053000/053026.png
+3141,2169,Embossed Book of Silver,0,1,/i/033000/033416.png
+3142,1971,Budding Oak Wand,0,1,/i/032000/032424.png
+3143,1976,Wand of Tremors,0,1,/i/032000/032408.png
+3144,1974,Wand of Frost,0,1,/i/032000/032410.png
+3145,1978,Wand of Tides,0,1,/i/032000/032409.png
+3146,7014,Clinker Bricks,0,1,/i/021000/021003.png
+3147,7979,Planter Partition,0,1,/i/052000/052517.png
+3148,5517,Lanolin,0,1,/i/022000/022609.png
+3149,4567,Smelling Salts,0,3,/i/020000/020644.png
+3150,6360,Glade House Roof (Composite),0,1,/i/050000/050414.png
+3151,28739,Skybuilders' Plant Oil,0,1,/i/022000/022636.png
+3152,29806,Grade 2 Skybuilders' Plant Oil,0,1,/i/022000/022671.png
+3153,31198,Grade 3 Skybuilders' Plant Oil,0,1,/i/022000/022671.png
+3154,31927,Grade 4 Skybuilders' Plant Oil,0,1,/i/022000/022671.png
+3155,5486,Shark Oil,0,1,/i/022000/022636.png
+3156,7017,Varnish,0,1,/i/022000/022802.png
+3157,7994,Water Lilies,0,1,/i/053000/053060.png
+3158,2174,Book of Mythril,0,1,/i/033000/033422.png
+3159,4553,Mega-Potion,0,3,/i/020000/020603.png
+3160,5479,Enchanted Electrum Ink,0,1,/i/025000/025924.png
+3161,6642,Sylphic Flower Vase,0,1,/i/052000/052111.png
+3162,23893,Bathroom Floor Tiles,0,1,/i/052000/052028.png
+3163,23894,Bathroom Wall Tiles,0,1,/i/052000/052382.png
+3164,4608,Mega-Potion of Mind,0,3,/i/020000/020669.png
+3165,1983,Wand of Gales,0,1,/i/032000/032406.png
+3166,1985,Wand of Storms,0,1,/i/032000/032407.png
+3167,1981,Wand of Flames,0,1,/i/032000/032405.png
+3168,4604,Mega-Potion of Strength,0,3,/i/020000/020665.png
+3169,4607,Mega-Potion of Intelligence,0,3,/i/020000/020668.png
+3170,2185,Book of Electrum,0,1,/i/033000/033433.png
+3171,8002,Planter Box,0,1,/i/053000/053068.png
+3172,4756,Cream Cheese,0,3,/i/024000/024455.png
+3173,4686,Sauerkraut,0,3,/i/024000/024155.png
+3174,4724,Cheese Souffle,0,3,/i/024000/024069.png
+3175,4677,Ratatouille,0,3,/i/024000/024108.png
+3176,4663,Mugwort Carp,0,3,/i/024000/024314.png
+3177,4702,Knight's Bread,0,3,/i/024000/024002.png
+3178,4687,Stuffed Artichoke,0,3,/i/024000/024159.png
+3179,4692,Raptor Stew,0,3,/i/024000/024203.png
+3180,4747,Apple Juice,0,3,/i/024000/024402.png
+3181,4733,Pastry Fish,0,3,/i/024000/024052.png
+3182,6143,Grilled Raincaller,0,3,/i/024000/024301.png
+3183,7959,Gourmet Lunch,0,1,/i/052000/052135.png
+3184,28740,Skybuilders' Uncooked Pasta,0,1,/i/025000/025058.png
+3185,29807,Grade 2 Skybuilders' Bread,0,1,/i/024000/024003.png
+3186,31199,Grade 3 Skybuilders' Sesame Cookie,0,1,/i/024000/024007.png
+3187,31928,Grade 4 Skybuilders' Sesame Cookie,0,1,/i/024000/024007.png
+3188,4646,Jerked Beef,0,3,/i/024000/024353.png
+3189,4671,Salt Cod Puffs,0,3,/i/024000/024308.png
+3190,4757,Rolanberry Cheese,0,3,/i/024000/024456.png
+3191,4720,Fish Soup,0,3,/i/024000/024105.png
+3192,23874,Redoubtable Rolanberry Tart,0,1,/i/052000/052958.png
+3193,4693,Button Mushroom Saute,0,3,/i/024000/024202.png
+3194,4664,Stuffed Cabbage,0,3,/i/024000/024307.png
+3195,4727,Rolanberry Lassi,0,3,/i/024000/024454.png
+3196,4703,La Noscean Toast,0,3,/i/024000/024008.png
+3197,8804,Starlight Cake,0,1,/i/052000/052153.png
+3198,15146,Alpine Breakfast,0,1,/i/052000/052194.png
