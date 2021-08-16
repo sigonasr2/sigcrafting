@@ -30,21 +30,16 @@ function ItemGroup(p) {
 	return <Accordion.Item className="bg-dark" eventKey={p.akey}>
 				<Accordion.Header className="panel-body bg-dark">{p.name}</Accordion.Header>
 				<Accordion.Body className="panel-body">
-				  {p.data.sort((a,b)=>{
-					  if (b.required===b.obtained&&a.required===a.obtained) {
-						  return a.id-b.id
-					  } else
-					  if (b.required===b.obtained) {
-						  return -1
-					  } else {
-						  return 0
-					  }
-				  }).map((item,i,arr)=><Row key={item.id} className={"pb-1 pt-1 text-light"+(Number(item.obtained)===0?" notStarted":Number(item.obtained)===Number(item.required)?" completed":" inProgress")}>
+				  {p.data.map((item,i,arr)=><Row key={item.id} className={"pb-1 pt-1 text-light"+(Number(item.obtained)===0?" notStarted":Number(item.obtained)===Number(item.required)?" completed":" inProgress")}>
 						<Col>
 							<img src={"https://xivapi.com"+item.icon}/> {item.name}
 						</Col>
 						<Col>
-							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{var newData=[...p.data];newData[i].obtained=Math.min(item.required,f.currentTarget.value);p.setData(newData);}} type="number" min="0" max={item.required}/> / {item.required}
+							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{var newData=[...p.data];newData[i].obtained=Math.min(item.required,f.currentTarget.value);p.setData(newData.sort((a,b)=>{
+								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
+								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
+								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
+							}));}} type="number" min="0" max={item.required}/> / {item.required}
 						</Col>
 						<Col>
 							<a style={{position:"relative",top:"8px"}} className="text-muted" href={"https://garlandtools.org/db/#item/"+item.itemid} target="tools">View Item Info</a>
@@ -109,6 +104,13 @@ function App() {
 			})
 			.catch((err)=>{
 				console.log(err.message)
+				setData([
+					{id:1726,itemid:2,name:"Fire Shard",icon:"/i/020000/020001.png",obtained:694,required:4124},
+					{id:1727,itemid:3,name:"Ice Shard",icon:"/i/020000/020003.png",obtained:0,required:1226},
+					{id:1728,itemid:4,name:"Wind Shard",icon:"/i/020000/020004.png",obtained:4719,required:4719},
+					{id:1729,itemid:5,name:"Earth Shard",icon:"/i/020000/020006.png",obtained:15,required:1764},
+					{id:1730,itemid:6,name:"Lightning Shard",icon:"/i/020000/020005.png",obtained:0,required:2374},
+				])
 			})
 			setUpdate(false)
 		}
