@@ -12,6 +12,8 @@ import Button from 'react-bootstrap/Button';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Accordion from 'react-bootstrap/Accordion';
 
+import { FaCheckCircle } from 'react-icons/fa';
+
 
 const parse = require('csv-parse/lib/sync')
 const axios = require('axios');
@@ -51,7 +53,12 @@ function ItemGroup(p) {
 								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
 								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
 								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
-							}));}} type="number" min="0" max={item.required}/> / {item.required}
+							}));}} type="number" min="0" max={item.required}/> / {item.required} {item.required!==item.obtained&&<FaCheckCircle style={{color:"green"}} onClick={(f)=>{
+							var correctedVal=item.required; if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()}); var newData=[...displayData];newData[i].obtained=correctedVal;p.setLastModified(new Date());setDisplayData(newData.sort((a,b)=>{
+								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
+								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
+								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
+							}));}}/>}
 						</Col>
 						<Col>
 							<a style={{position:"relative",top:"8px"}} className="text-muted" href={"https://garlandtools.org/db/#item/"+item.itemid} target="tools">View Item Info</a>
