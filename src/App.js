@@ -35,7 +35,7 @@ function ItemGroup(p) {
 							<img src={"https://xivapi.com"+item.icon}/> {item.name}
 						</Col>
 						<Col>
-							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{var newData=[...p.data];newData[i].obtained=Math.min(item.required,f.currentTarget.value);p.setData(newData.sort((a,b)=>{
+							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} var newData=[...p.data];newData[i].obtained=Math.min(item.required,f.currentTarget.value);p.setData(newData.sort((a,b)=>{
 								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
 								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
 								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
@@ -52,6 +52,9 @@ function ItemGroup(p) {
 function App() {
 	
 	const [data,setData] = useState([])
+	const [data2,setData2] = useState([])
+	const [data3,setData3] = useState([])
+	const [data4,setData4] = useState([])
 	const [fileData,setFileData] = useState()
 	const [update,setUpdate] = useState(true)
 	const [succeeded,setSucceeded] = useState(0)
@@ -70,7 +73,7 @@ function App() {
 					for (var r of results) {
 						if (r.Name===d[val].Item&&r.UrlType==="Item") {
 							found=true
-							console.log("Found "+r)
+							//console.log("Found "+r)
 							setSucceeded(succeeded+1)
 							var dataObj = {
 								itemid:r.ID,
@@ -100,7 +103,11 @@ function App() {
 		if (update) {
 			axios.get("https://projectdivar.com:4505/getData")
 			.then((data)=>{
-				setData(data.data)
+				//setData(data.data)
+				setData(data.data.slice(0,135))
+				setData2(data.data.slice(135,250))
+				setData3(data.data.slice(250,388))
+				setData4(data.data.slice(388,data.data.length))
 			})
 			.catch((err)=>{
 				console.log(err.message)
@@ -143,10 +150,10 @@ function App() {
 			  {data.length>0?
 				  <>
 					<Accordion className="bg-dark" defaultActiveKey="0">
-					  <ItemGroup name="Gathering Items" akey="0" data={data} setData={setData} sections={[0,data.length]}/>
-						  {/*<ItemGroup name="Other Items" akey="1" data={data} setData={setData} sections={[135,250]}/>
-					  <ItemGroup name="Pre-crafting" akey="2" data={data} setData={setData} sections={[250,388]}/>
-						  <ItemGroup name="Crafting Items" akey="3" data={data} setData={setData} sections={[388,data.length]}/>*/}
+					  <ItemGroup name="Gathering Items" akey="0" data={data} setData={setData} sections={[0,135]}/>
+					  <ItemGroup name="Other Items" akey="1" data={data2} setData={setData2} sections={[135,250]}/>
+					  <ItemGroup name="Pre-crafting" akey="2" data={data3} setData={setData3} sections={[250,388]}/>
+					  <ItemGroup name="Crafting Items" akey="3" data={data4} setData={setData4} sections={[388,data.length]}/>
 					 </Accordion>
 				</>:
 				  !disabled&&
