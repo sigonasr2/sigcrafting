@@ -16,7 +16,19 @@ import Accordion from 'react-bootstrap/Accordion';
 const parse = require('csv-parse/lib/sync')
 const axios = require('axios');
 
+const BACKEND_URL = "https://projectdivar.com:4505"
+
 function ItemGroup(p) {
+	const { data } = p
+	const [displayData,setDisplayData] = useState([])
+	
+	useEffect(()=>{
+		setDisplayData([...data].sort((a,b)=>{
+			if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
+			if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
+			if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
+		}))
+	},[data])
 	
 	function findIndex(name,arr) {
 		for (var i=0;i<arr.length;i++) {
@@ -30,12 +42,12 @@ function ItemGroup(p) {
 	return <Accordion.Item className="bg-dark" eventKey={p.akey}>
 				<Accordion.Header className="panel-body bg-dark">{p.name}</Accordion.Header>
 				<Accordion.Body className="panel-body">
-				  {p.data.map((item,i,arr)=><Row key={item.id} className={"pb-1 pt-1 text-light"+(Number(item.obtained)===0?" notStarted":Number(item.obtained)===Number(item.required)?" completed":" inProgress")}>
+				  {displayData.map((item,i,arr)=><Row key={item.id} className={"pb-1 pt-1 text-light"+(Number(item.obtained)===0?" notStarted":Number(item.obtained)===Number(item.required)?" completed":" inProgress")}>
 						<Col>
 							<img src={"https://xivapi.com"+item.icon}/> {item.name}
 						</Col>
 						<Col>
-							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} var newData=[...p.data];newData[i].obtained=Math.min(item.required,f.currentTarget.value);p.setData(newData.sort((a,b)=>{
+							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{var correctedVal=Math.min(item.required,f.currentTarget.value); if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()}); var newData=[...displayData];newData[i].obtained=correctedVal;p.setLastModified(new Date());setDisplayData(newData.sort((a,b)=>{
 								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
 								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
 								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
@@ -61,6 +73,31 @@ function App() {
 	const [failed,setFailed] = useState(0)
 	const [total,setTotal] = useState(0)
 	const [listData,setListData] = useState([])
+	const [lastModified,setLastModified] = useState(new Date())
+	
+	useEffect(()=>{
+		const interval = setInterval(()=>{
+			axios.get(BACKEND_URL+"/lastUpdate")
+			.then((data)=>{
+				if (new Date(data.data[0].last_modified)>lastModified) {
+					console.log("Updating entries... "+[lastModified,data.data[0].last_modified])
+					setLastModified(new Date())
+					return axios.get("https://projectdivar.com:4505/getData")
+					.then((data)=>{
+						//setData(data.data)
+						setData(data.data.slice(0,135))
+						setData2(data.data.slice(135,250))
+						setData3(data.data.slice(250,388))
+						setData4(data.data.slice(388,data.data.length))
+					})
+				}
+			})
+			.catch((err)=>{
+				console.log(err.message)
+			})
+		},1000)
+		return ()=>clearInterval(interval)
+	},[lastModified])
 	
 	const disabled=true
 	
@@ -82,7 +119,7 @@ function App() {
 								required:d[val].Needed,
 								icon:r.Icon
 							}
-							return axios.post("https://projectdivar.com:4505/setItem",dataObj)
+							return axios.post(BACKEND_URL+"/setItem",dataObj)
 						}
 					}
 					if (!found) {
@@ -150,10 +187,10 @@ function App() {
 			  {data.length>0?
 				  <>
 					<Accordion className="bg-dark" defaultActiveKey="0">
-					  <ItemGroup name="Gathering Items" akey="0" data={data} setData={setData} sections={[0,135]}/>
-					  <ItemGroup name="Other Items" akey="1" data={data2} setData={setData2} sections={[135,250]}/>
-					  <ItemGroup name="Pre-crafting" akey="2" data={data3} setData={setData3} sections={[250,388]}/>
-					  <ItemGroup name="Crafting Items" akey="3" data={data4} setData={setData4} sections={[388,data.length]}/>
+					  <ItemGroup name="Gathering Items" akey="0" data={data} setData={setData} setLastModified={setLastModified}/>
+					  <ItemGroup name="Other Items" akey="1" data={data2} setData={setData2} setLastModified={setLastModified}/>
+					  <ItemGroup name="Pre-crafting" akey="2" data={data3} setData={setData3} setLastModified={setLastModified}/>
+					  <ItemGroup name="Crafting Items" akey="3" data={data4} setData={setData4} setLastModified={setLastModified}/>
 					 </Accordion>
 				</>:
 				  !disabled&&
