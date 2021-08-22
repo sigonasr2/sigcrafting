@@ -43,6 +43,14 @@ function ItemGroup(p) {
 			}
 		}
 	}
+
+	useEffect(()=>{
+		displayData.forEach((item)=>{
+			if (document.getElementById("field_"+item.id)) {
+				document.getElementById("field_"+item.id).value=item.obtained
+			}
+		})
+	},[displayData])
 	
 	return <Accordion.Item className="bg-dark" eventKey={p.akey}>
 				<Accordion.Header className="panel-body bg-dark">{p.name}</Accordion.Header>
@@ -52,35 +60,9 @@ function ItemGroup(p) {
 							<img src={"https://xivapi.com"+item.icon}/> {item.name}
 						</Col>
 						<Col>
-							<input style={{width:"5em"}} value={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{var correctedVal=Math.min(item.required,f.currentTarget.value); if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} 
-								axios.get(BACKEND_URL+"/lastUpdate")
-								.then(async(data)=>{
-									if (new Date(data.data[0].last_modified)>lastModified) {
-										console.log("Updating entries... "+[lastModified,data.data[0].last_modified])
-										setLastModified(new Date())
-										return await axios.get("https://projectdivar.com:4505/getData")
-										.then((data)=>{
-											//setData(data.data)
-											setData1(data.data.slice(dataSplitters[0],dataSplitters[1]))
-											setData2(data.data.slice(dataSplitters[1],dataSplitters[2]))
-											setData3(data.data.slice(dataSplitters[2],dataSplitters[3]))
-											setData4(data.data.slice(dataSplitters[3],data.data.length))
-										})
-									}
-								})
-								.then((data)=>{
-									axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()});
-									var newData=[...displayData];newData[i].obtained=correctedVal;
-									setLastModified(new Date());
-									setDisplayData(newData.sort((a,b)=>{
-										if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
-										if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
-										if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
-									}));
-								})
-								.catch((err)=>{
-									console.log(err.message)
-								})
+							<input id={"field_"+item.id} style={{width:"5em"}} defaultValue={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{
+								var correctedVal=Math.min(item.required,f.currentTarget.value); if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} 
+								axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()});
 							}} type="number" min="0" max={item.required}/> / {item.required} {item.required!==item.obtained&&<FaCheckCircle style={{color:"green"}} onClick={(f)=>{
 							var correctedVal=item.required; if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()}); var newData=[...displayData];newData[i].obtained=correctedVal;p.setLastModified(new Date());setDisplayData(newData.sort((a,b)=>{
 								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
@@ -176,10 +158,10 @@ function App() {
 			axios.get("https://projectdivar.com:4505/getData")
 			.then((data)=>{
 				//setData(data.data)
-				setData(data.data.slice(0,135))
-				setData2(data.data.slice(135,250))
-				setData3(data.data.slice(250,388))
-				setData4(data.data.slice(388,data.data.length))
+				setData(data.data.slice(dataSplitters[0],dataSplitters[1]))
+				setData2(data.data.slice(dataSplitters[1],dataSplitters[2]))
+				setData3(data.data.slice(dataSplitters[2],dataSplitters[3]))
+				setData4(data.data.slice(dataSplitters[3],data.data.length))
 			})
 			.catch((err)=>{
 				console.log(err.message)
