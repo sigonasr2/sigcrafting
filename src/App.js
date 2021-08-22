@@ -11,6 +11,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Accordion from 'react-bootstrap/Accordion';
+import ToastContainer from 'react-bootstrap/ToastContainer'
+import Toast from 'react-bootstrap/Toast'
 
 import { FaCheckCircle } from 'react-icons/fa';
 
@@ -24,6 +26,7 @@ const BACKEND_URL = "https://projectdivar.com:4505"
 
 function ItemGroup(p) {
 	const { data } = p
+	const { contributor } = p
 	const { setData1,setData2,setData3,setData4,setLastModified,lastModified } = p
 	const [displayData,setDisplayData] = useState([])
 	
@@ -51,6 +54,12 @@ function ItemGroup(p) {
 			}
 		})
 	},[displayData])
+
+	function updateItem(item,target,contributor) {
+		var correctedVal=Math.min(item.required,target.value);
+		if (correctedVal===item.obtained) {return;}
+		axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date(),item_name:item.name,username:contributor,required:item.required,operation:correctedVal==item.required?"FINISH":correctedVal>item.obtained?"INCREASE":"SET",previous_amt:item.obtained});
+	}
 	
 	return <Accordion.Item className="bg-dark" eventKey={p.akey}>
 				<Accordion.Header className="panel-body bg-dark">{p.name}</Accordion.Header>
@@ -61,14 +70,10 @@ function ItemGroup(p) {
 						</Col>
 						<Col>
 							<input id={"field_"+item.id} style={{width:"5em"}} defaultValue={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{
-								var correctedVal=Math.min(item.required,f.currentTarget.value); if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} 
-								axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()});
-							}} type="number" min="0" max={item.required}/> / {item.required} {item.required!==item.obtained&&<FaCheckCircle style={{color:"green"}} onClick={(f)=>{
-							var correctedVal=item.required; if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date()}); var newData=[...displayData];newData[i].obtained=correctedVal;p.setLastModified(new Date());setDisplayData(newData.sort((a,b)=>{
-								if (b.required===b.obtained&&a.required!==a.obtained) {return -1}
-								if (b.required===b.obtained&&a.required===a.obtained) {return a.id-b.id}
-								if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
-							}));}}/>}
+								if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} 
+							}} onBlur={(f)=>{updateItem(item,f.currentTarget,contributor)}} type="number" min="0" max={item.required}/> / {item.required} {item.required!==item.obtained&&<FaCheckCircle style={{color:"green"}} onClick={(f)=>{
+								updateItem(item,{value:item.required},contributor)
+							}}/>}
 						</Col>
 						<Col>
 							<a style={{position:"relative",top:"8px"}} className="text-muted" href={"https://garlandtools.org/db/#item/"+item.itemid} target="tools">View Item Info</a>
@@ -91,6 +96,8 @@ function App() {
 	const [total,setTotal] = useState(0)
 	const [listData,setListData] = useState([])
 	const [lastModified,setLastModified] = useState(new Date())
+
+	const [contributor,setContributor] = useState("")
 	
 	useEffect(()=>{
 		const interval = setInterval(()=>{
@@ -198,40 +205,56 @@ function App() {
 				<Navbar.Brand href="#home">
 				  <img src={process.env.PUBLIC_URL+"/favicon.ico"} width="30" height="30" className="d-inline-block align-top" alt="BUN logo"/> BUN Collab App
 				</Navbar.Brand>
+				{contributor.length>0&&<span className="text-light font-weight-light font-italic">Signed in as {contributor}</span>}
 			  </Container>
 		  </Navbar>
-		  <Container>
-			  {data.length>0?
-				  <>
-					<Accordion className="bg-dark" defaultActiveKey="0">
-					  <ItemGroup name="Gathering Items" akey="0" data={data} lastModified={lastModified} setLastModified={setLastModified} setData={setData} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-					  <ItemGroup name="Other Items" akey="1" data={data2} lastModified={lastModified} setLastModified={setLastModified} setData={setData2} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-					  <ItemGroup name="Pre-crafting" akey="2" data={data3} lastModified={lastModified} setLastModified={setLastModified} setData={setData3} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-					  <ItemGroup name="Crafting Items" akey="3" data={data4} lastModified={lastModified} setLastModified={setLastModified} setData={setData4} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-					 </Accordion>
-				</>:
-				  !disabled&&
-				  <Row>
-					  <Col>
-					  {total===0?<caption><label className="buttonLabel" for="uploads">Import List</label><input onChange={(f)=>{
-							const reader = new FileReader()
-							reader.onload=(ev)=>{
-								setFileData(ev.target.result)
-							}
-							reader.readAsText(f.target.files[0])
-					  }} style={{opacity:0}} id="uploads" type="file" accept=".txt,.csv"/></caption>:
-						<>
-							<ProgressBar>
-							  <ProgressBar animated striped variant="success" now={Math.round(succeeded/total)*100} />
-							  <ProgressBar animated striped variant="danger" now={Math.round(failed/total)*100} />
-							</ProgressBar>
-							<div className="text-center">{Math.round(((failed+succeeded)/total)*100)+"%"}</div>
-						</>
-					  }
-					  </Col>
-				  </Row>
-			  }
-		  </Container>
+			<Container>
+				{contributor.length===0?<>
+							<input placeHolder="Bun" onKeyDown={(k)=>{if (k.key==='Enter') {setContributor(document.getElementById("username").value)}}} id="username"/>
+							<button type="Submit" onClick={(f)=>{setContributor(document.getElementById("username").value)}}>Submit</button>
+						</>:
+						data.length>0?
+							<>
+								<Accordion className="bg-dark" defaultActiveKey="0">
+								<ItemGroup name="Gathering Items" contributor={contributor} akey="0" data={data} lastModified={lastModified} setLastModified={setLastModified} setData={setData} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+								<ItemGroup name="Other Items" contributor={contributor} akey="1" data={data2} lastModified={lastModified} setLastModified={setLastModified} setData={setData2} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+								<ItemGroup name="Pre-crafting" contributor={contributor} akey="2" data={data3} lastModified={lastModified} setLastModified={setLastModified} setData={setData3} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+								<ItemGroup name="Crafting Items" contributor={contributor} akey="3" data={data4} lastModified={lastModified} setLastModified={setLastModified} setData={setData4} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+								</Accordion>
+							</>:
+							!disabled&&
+							<Row>
+								<Col>
+								{total===0?<caption><label className="buttonLabel" for="uploads">Import List</label><input onChange={(f)=>{
+										const reader = new FileReader()
+										reader.onload=(ev)=>{
+											setFileData(ev.target.result)
+										}
+										reader.readAsText(f.target.files[0])
+								}} style={{opacity:0}} id="uploads" type="file" accept=".txt,.csv"/></caption>:
+									<>
+										<ProgressBar>
+										<ProgressBar animated striped variant="success" now={Math.round(succeeded/total)*100} />
+										<ProgressBar animated striped variant="danger" now={Math.round(failed/total)*100} />
+										</ProgressBar>
+										<div className="text-center">{Math.round(((failed+succeeded)/total)*100)+"%"}</div>
+									</>
+								}
+								</Col>
+							</Row>
+						
+					}
+		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
+			<ToastContainer position="bottom-end">
+				<Toast autohide delay={10000} onClose={()=>{console.log("closing")}} bg="primary">
+					<Toast.Header closeButton={true}>
+					<strong className="me-auto">Testing</strong>
+					<small>11 mins ago</small>
+					</Toast.Header>
+				</Toast>
+			</ToastContainer>
+		</div>
+		</Container>
 	  </Container>
   );
 }
