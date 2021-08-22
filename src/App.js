@@ -98,6 +98,12 @@ function App() {
 	const [lastModified,setLastModified] = useState(new Date())
 
 	const [contributor,setContributor] = useState("")
+	const [notifications,setNotifications] = useState([])
+	const [notificationLastUpdate,setNotificationLastUpdate] = useState(new Date())
+
+	function LZ(digits,numb) {
+		return "0".repeat(digits-String(numb).length)+numb
+	}
 	
 	useEffect(()=>{
 		const interval = setInterval(()=>{
@@ -122,6 +128,36 @@ function App() {
 		},1000)
 		return ()=>clearInterval(interval)
 	},[lastModified])
+
+	useEffect(()=>{
+		const interval = setInterval(()=>{
+			axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
+			.then((data)=>{
+				if (data.data.length>0) {
+					var newNotifications = [...notifications]
+					for (var dat of data.data) {
+						var exists=false
+						for (var not of newNotifications) {
+							if (not.id===dat.id) {
+								exists=true
+								break;
+							}
+						}
+						if (!exists) {
+							newNotifications.push(dat)
+						}
+					}
+					console.log("New notification array: "+JSON.stringify(newNotifications))
+					setNotifications(newNotifications)
+					setNotificationLastUpdate(new Date())
+				}
+			})
+			.catch((err)=>{
+				console.log(err.message)
+			})
+		},1000)
+		return ()=>clearInterval(interval)
+	},[notificationLastUpdate])
 	
 	const disabled=true
 	
@@ -197,6 +233,10 @@ function App() {
 		downloadData(d,0,d.length)
 		setTotal(d.length)
 	},[fileData])
+
+	useEffect(()=>{
+		console.log(notifications)
+	},[notifications])
 	
   return (  
 	  <Container className="bg-dark" fluid>
@@ -216,10 +256,10 @@ function App() {
 						data.length>0?
 							<>
 								<Accordion className="bg-dark" defaultActiveKey="0">
-								<ItemGroup name="Gathering Items" contributor={contributor} akey="0" data={data} lastModified={lastModified} setLastModified={setLastModified} setData={setData} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-								<ItemGroup name="Other Items" contributor={contributor} akey="1" data={data2} lastModified={lastModified} setLastModified={setLastModified} setData={setData2} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-								<ItemGroup name="Pre-crafting" contributor={contributor} akey="2" data={data3} lastModified={lastModified} setLastModified={setLastModified} setData={setData3} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
-								<ItemGroup name="Crafting Items" contributor={contributor} akey="3" data={data4} lastModified={lastModified} setLastModified={setLastModified} setData={setData4} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+									<ItemGroup name="Gathering Items" contributor={contributor} akey="0" data={data} lastModified={lastModified} setLastModified={setLastModified} setData={setData} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+									<ItemGroup name="Other Items" contributor={contributor} akey="1" data={data2} lastModified={lastModified} setLastModified={setLastModified} setData={setData2} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+									<ItemGroup name="Pre-crafting" contributor={contributor} akey="2" data={data3} lastModified={lastModified} setLastModified={setLastModified} setData={setData3} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
+									<ItemGroup name="Crafting Items" contributor={contributor} akey="3" data={data4} lastModified={lastModified} setLastModified={setLastModified} setData={setData4} setData1={setData} setData2={setData2} setData3={setData3} setData4={setData4}/>
 								</Accordion>
 							</>:
 							!disabled&&
@@ -246,12 +286,17 @@ function App() {
 					}
 		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
 			<ToastContainer position="bottom-end">
-				<Toast autohide delay={10000} onClose={()=>{console.log("closing")}} bg="primary">
-					<Toast.Header closeButton={true}>
-					<strong className="me-auto">Testing</strong>
-					<small>11 mins ago</small>
-					</Toast.Header>
-				</Toast>
+				{notifications.map((not)=>{
+					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = notifications.filter((no)=>no.id!==not.id); setNotifications(newArr)}} bg="primary">
+						<Toast.Header closeButton={true}>
+						<span className="me-auto">
+							<strong>{not.username}</strong>
+							{not.operation==="FINISH"?" has finished collecting "+not.required+"/"+not.required+" "+not.item_name+"!":
+							not.operation==="INCREASE"?" has collected "+not.obtained+"/"+not.required+" "+not.item_name+" (+"+(not.obtained-not.previous_amt)+")"
+							:" has set "+not.item_name+"  to "+not.obtained+"/"+not.required}</span>
+						</Toast.Header>
+					</Toast>
+				})}
 			</ToastContainer>
 		</div>
 		</Container>
