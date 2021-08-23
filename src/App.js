@@ -99,6 +99,7 @@ function App() {
 
 	const [contributor,setContributor] = useState("")
 	const [notifications,setNotifications] = useState([])
+	const [closedNotifications,setClosedNotifications] = useState([])
 	const [notificationLastUpdate,setNotificationLastUpdate] = useState(new Date())
 
 	function LZ(digits,numb) {
@@ -135,6 +136,9 @@ function App() {
 			.then((data)=>{
 				if (data.data.length>0) {
 					var newNotifications = [...notifications]
+					for (var not of closedNotifications) {
+						newNotifications = newNotifications.filter((not2)=>not2.id!==not.id)
+					}
 					for (var dat of data.data) {
 						var exists=false
 						for (var not of newNotifications) {
@@ -250,7 +254,7 @@ function App() {
 		  </Navbar>
 			<Container>
 				{contributor.length===0?<>
-							<input placeHolder="Bun" onKeyDown={(k)=>{if (k.key==='Enter') {setContributor(document.getElementById("username").value)}}} id="username"/>
+							<input placeHolder="e.g. Bun" onKeyDown={(k)=>{if (k.key==='Enter') {setContributor(document.getElementById("username").value)}}} id="username"/>
 							<button type="Submit" onClick={(f)=>{setContributor(document.getElementById("username").value)}}>Submit</button>
 						</>:
 						data.length>0?
@@ -287,7 +291,7 @@ function App() {
 		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
 			<ToastContainer position="bottom-end">
 				{notifications.map((not)=>{
-					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = notifications.filter((no)=>no.id!==not.id); setNotifications(newArr)}} bg="primary">
+					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = closedNotifications.push(not); setClosedNotifications(newArr)}} bg="primary">
 						<Toast.Header closeButton={true}>
 						<span className="me-auto">
 							<strong>{not.username}</strong>
