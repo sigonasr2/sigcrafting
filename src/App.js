@@ -136,24 +136,12 @@ function App() {
 			.then((data)=>{
 				if (data.data.length>0) {
 					var newNotifications = [...notifications]
-					for (var not of closedNotifications) {
-						newNotifications = newNotifications.filter((not2)=>not2.id!==not.id)
-					}
 					for (var dat of data.data) {
-						var exists=false
-						for (var not of newNotifications) {
-							if (not.id===dat.id) {
-								exists=true
-								break;
-							}
-						}
-						if (!exists) {
-							newNotifications.push(dat)
-						}
+						newNotifications.push(dat)
 					}
 					console.log("New notification array: "+JSON.stringify(newNotifications))
-					setNotifications(newNotifications)
 					setNotificationLastUpdate(new Date())
+					setNotifications(newNotifications)
 				}
 			})
 			.catch((err)=>{
@@ -237,10 +225,6 @@ function App() {
 		downloadData(d,0,d.length)
 		setTotal(d.length)
 	},[fileData])
-
-	useEffect(()=>{
-		console.log(notifications)
-	},[notifications])
 	
   return (  
 	  <Container className="bg-dark" fluid>
@@ -290,8 +274,8 @@ function App() {
 					}
 		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
 			<ToastContainer position="bottom-end">
-				{notifications.map((not)=>{
-					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = closedNotifications.push(not); setClosedNotifications(newArr)}} bg="primary">
+				{notifications.map((not,i)=>{
+					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = [...notifications]; newArr=newArr.splice(i,1); setNotifications(newArr)}} bg="primary">
 						<Toast.Header closeButton={true}>
 						<span className="me-auto">
 							<strong>{not.username}</strong>
