@@ -26,6 +26,9 @@ const BACKEND_URL = "https://projectdivar.com:4505"
 
 const NOTIFICATIONTIMEOUT = 300 //In seconds
 
+const progress1 = new Audio(process.env.PUBLIC_URL+"/progress1.mp3")
+const progress2 = new Audio(process.env.PUBLIC_URL+"/progress2.mp3")
+
 function ItemGroup(p) {
 	const { data } = p
 	const { contributor } = p
@@ -121,7 +124,6 @@ function App() {
 	const [contributor,setContributor] = useState("")
 	const [notifications,setNotifications] = useState([])
 	const [closedNotifications,setClosedNotifications] = useState([])
-	const [notificationLastUpdate,setNotificationLastUpdate] = useState(new Date())
 
 	function LZ(digits,numb) {
 		return "0".repeat(digits-String(numb).length)+numb
@@ -152,13 +154,32 @@ function App() {
 	},[lastModified])
 
 	useEffect(()=>{
+		var notificationLastUpdate = new Date(new Date()-(NOTIFICATIONTIMEOUT*1000))
+		var largestNotificationID = -1
 		const interval = setInterval(()=>{
-			setNotificationLastUpdate(new Date()-(NOTIFICATIONTIMEOUT*1000))
+			notificationLastUpdate = new Date(new Date()-(NOTIFICATIONTIMEOUT*1000))
 			axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
 			.then((data)=>{
 				if (data.data.length>0) {
 					console.log("New notification array: "+JSON.stringify(data.data))
 					setNotifications(data.data)
+					var completion=false
+					var largestID = -1
+					for (var dat of data.data) {
+						if (dat.id>largestNotificationID && dat.operation==="FINISH") {
+							completion=true
+							largestID=Math.max(dat.id,largestID)
+							break
+						} else 
+						if (dat.id>largestNotificationID)
+						{
+							largestID=Math.max(dat.id,largestID)
+						}
+					}
+					if (largestID!==-1) {	
+						largestNotificationID = largestID
+						if (completion) {progress2.play()} else {progress1.play()}
+					}
 				}
 			})
 			.catch((err)=>{
