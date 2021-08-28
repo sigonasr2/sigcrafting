@@ -29,6 +29,7 @@ function ItemGroup(p) {
 	const { contributor } = p
 	const { setData1,setData2,setData3,setData4,setLastModified,lastModified } = p
 	const [displayData,setDisplayData] = useState([])
+	const [lockout,setLockout] = useState(false)
 	
 	useEffect(()=>{
 		setDisplayData([...data].sort((a,b)=>{
@@ -57,8 +58,15 @@ function ItemGroup(p) {
 
 	function updateItem(item,target,contributor) {
 		var correctedVal=Math.min(item.required,target.value);
-		if (correctedVal===item.obtained) {return;}
-		axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date(),item_name:item.name,username:contributor,required:item.required,operation:correctedVal==item.required?"FINISH":correctedVal>item.obtained?"INCREASE":"SET",previous_amt:item.obtained});
+		if (correctedVal==item.obtained) {return;}
+		setLockout(true)
+		axios.post(BACKEND_URL+"/updateItem",{obtained:correctedVal,id:item.id,last_modified:new Date(),item_name:item.name,username:contributor,required:item.required,operation:correctedVal==item.required?"FINISH":correctedVal>item.obtained?"INCREASE":"SET",previous_amt:item.obtained})
+		.then((data)=>{
+			setLockout(false)
+		})
+		.catch((err)=>{
+			
+		})
 	}
 	
 	return <Accordion.Item className="bg-dark" eventKey={p.akey}>
@@ -69,7 +77,11 @@ function ItemGroup(p) {
 							<img src={"https://xivapi.com"+item.icon}/> {item.name}
 						</Col>
 						<Col>
-							<input id={"field_"+item.id} style={{width:"5em"}} defaultValue={item.obtained} className="mt-1 bg-secondary" onChange={(f)=>{
+							<input disabled={lockout} id={"field_"+item.id} style={{width:"5em"}} defaultValue={item.obtained} className="mt-1 bg-secondary"
+							onKeyDown={(k)=>{
+								if (k.key==='Enter') {updateItem(item,document.getElementById("field_"+item.id),contributor)}
+							}}
+							onChange={(f)=>{
 								if (f.currentTarget.value>=item.required) {f.currentTarget.blur()} 
 							}} onBlur={(f)=>{updateItem(item,f.currentTarget,contributor)}} type="number" min="0" max={item.required}/> / {item.required} {item.required!==item.obtained&&<FaCheckCircle style={{color:"green"}} onClick={(f)=>{
 								updateItem(item,{value:item.required},contributor)
