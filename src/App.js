@@ -24,6 +24,8 @@ const dataSplitters = [0,135,250,388]
 
 const BACKEND_URL = "https://projectdivar.com:4505"
 
+const NOTIFICATIONTIMEOUT = 300 //In seconds
+
 function ItemGroup(p) {
 	const { data } = p
 	const { contributor } = p
@@ -38,15 +40,6 @@ function ItemGroup(p) {
 			if (b.required!==b.obtained&&a.required!==a.obtained) {return a.id-b.id}
 		}))
 	},[data])
-	
-	function findIndex(name,arr) {
-		for (var i=0;i<arr.length;i++) {
-			if (arr[i].name===name) {
-				console.log("Found "+name+" at position "+i)
-				return i
-			}
-		}
-	}
 
 	useEffect(()=>{
 		displayData.forEach((item)=>{
@@ -65,7 +58,7 @@ function ItemGroup(p) {
 			setLockout(false)
 		})
 		.catch((err)=>{
-			
+
 		})
 	}
 	
@@ -100,7 +93,7 @@ function Notification(p) {
 	const [show,setShow] = useState(true)
 
 	const { not } = p
-	return <Toast key={not.id} show={show} autohide delay={10000} onClose={()=>{setShow(false)}} bg={not.operation==="FINISH"?"success":not.operation==="INCREASE"?"primary":"warning"}>
+	return <Toast key={not.id} show={show} autohide delay={NOTIFICATIONTIMEOUT*1000} onClose={()=>{setShow(false)}} bg={not.operation==="FINISH"?"success":not.operation==="INCREASE"?"primary":"warning"}>
 	<Toast.Header closeButton={true}>
 	<span className="me-auto">
 		<strong>{not.username}</strong>
@@ -160,7 +153,7 @@ function App() {
 
 	useEffect(()=>{
 		const interval = setInterval(()=>{
-			setNotificationLastUpdate(new Date()-10000)
+			setNotificationLastUpdate(new Date()-(NOTIFICATIONTIMEOUT*1000))
 			axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
 			.then((data)=>{
 				if (data.data.length>0) {
