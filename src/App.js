@@ -83,6 +83,22 @@ function ItemGroup(p) {
 			  </Accordion.Item>
 }
 
+function Notification(p) {
+
+	const [show,setShow] = useState(true)
+
+	const { not } = p
+	return <Toast key={not.id} show={show} autohide delay={10000} onClose={()=>{setShow(false)}} bg={not.operation==="FINISH"?"success":not.operation==="INCREASE"?"primary":"warning"}>
+	<Toast.Header closeButton={true}>
+	<span className="me-auto">
+		<strong>{not.username}</strong>
+		{not.operation==="FINISH"?" has finished collecting "+not.required+"/"+not.required+" "+not.item_name+"!":
+		not.operation==="INCREASE"?" has collected "+not.obtained+"/"+not.required+" "+not.item_name+" (+"+(not.obtained-not.previous_amt)+")"
+		:" has set "+not.item_name+"  to "+not.obtained+"/"+not.required}</span>
+	</Toast.Header>
+</Toast>
+}
+
 function App() {
 	
 	const [data,setData] = useState([])
@@ -132,16 +148,12 @@ function App() {
 
 	useEffect(()=>{
 		const interval = setInterval(()=>{
+			setNotificationLastUpdate(new Date()-10000)
 			axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
 			.then((data)=>{
 				if (data.data.length>0) {
-					var newNotifications = [...notifications]
-					for (var dat of data.data) {
-						newNotifications.push(dat)
-					}
-					console.log("New notification array: "+JSON.stringify(newNotifications))
-					setNotificationLastUpdate(new Date())
-					setNotifications(newNotifications)
+					console.log("New notification array: "+JSON.stringify(data.data))
+					setNotifications(data.data)
 				}
 			})
 			.catch((err)=>{
@@ -149,7 +161,7 @@ function App() {
 			})
 		},1000)
 		return ()=>clearInterval(interval)
-	},[notificationLastUpdate])
+	},[])
 	
 	const disabled=true
 	
@@ -274,16 +286,8 @@ function App() {
 					}
 		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
 			<ToastContainer position="bottom-end">
-				{notifications.map((not,i)=>{
-					return <Toast key={not.id} autohide delay={10000} onClose={()=>{var newArr = [...notifications]; newArr=newArr.splice(i,1); setNotifications(newArr)}} bg="primary">
-						<Toast.Header closeButton={true}>
-						<span className="me-auto">
-							<strong>{not.username}</strong>
-							{not.operation==="FINISH"?" has finished collecting "+not.required+"/"+not.required+" "+not.item_name+"!":
-							not.operation==="INCREASE"?" has collected "+not.obtained+"/"+not.required+" "+not.item_name+" (+"+(not.obtained-not.previous_amt)+")"
-							:" has set "+not.item_name+"  to "+not.obtained+"/"+not.required}</span>
-						</Toast.Header>
-					</Toast>
+				{notifications.map((not)=>{
+					return <Notification not={not}/>
 				})}
 			</ToastContainer>
 		</div>
