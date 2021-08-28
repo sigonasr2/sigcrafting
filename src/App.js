@@ -320,7 +320,7 @@ function App() {
 		<div style={{pointerEvents:"none",position:"fixed",top:"0px",left:"0px",width:"100%",height:"100%"}}>
 			<ToastContainer position="bottom-end">
 				{notifications.map((not)=>{
-					return <Notification not={not}/>
+					return <Notification key={not.id} not={not}/>
 				})}
 			</ToastContainer>
 		</div>
