@@ -156,35 +156,42 @@ function App() {
 	useEffect(()=>{
 		var notificationLastUpdate = new Date(new Date()-(NOTIFICATIONTIMEOUT*1000))
 		var largestNotificationID = -1
+		var dataCheck=true
 		const interval = setInterval(()=>{
-			notificationLastUpdate = new Date(new Date()-(NOTIFICATIONTIMEOUT*1000))
-			axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
-			.then((data)=>{
-				if (data.data.length>0) {
-					console.log("New notification array: "+JSON.stringify(data.data))
-					setNotifications(data.data)
-					var completion=false
-					var largestID = -1
-					for (var dat of data.data) {
-						if (dat.id>largestNotificationID && dat.operation==="FINISH") {
-							completion=true
-							largestID=Math.max(dat.id,largestID)
-							break
-						} else 
-						if (dat.id>largestNotificationID)
-						{
-							largestID=Math.max(dat.id,largestID)
+			if (dataCheck) {
+				dataCheck=false
+				notificationLastUpdate = new Date(new Date()-(NOTIFICATIONTIMEOUT*1000))
+				axios.get(BACKEND_URL+"/getNotifications?date="+encodeURIComponent(LZ(4,notificationLastUpdate.getUTCFullYear())+"-"+LZ(2,notificationLastUpdate.getUTCMonth()+1)+"-"+LZ(2,notificationLastUpdate.getUTCDate())+" "+LZ(2,notificationLastUpdate.getUTCHours())+":"+LZ(2,notificationLastUpdate.getUTCMinutes())+":"+LZ(2,notificationLastUpdate.getUTCSeconds())+"."+LZ(3,notificationLastUpdate.getUTCMilliseconds())+"+00"))
+				.then((data)=>{
+					if (data.data.length>0) {
+						console.log("New notification array: "+JSON.stringify(data.data))
+						setNotifications(data.data)
+						var completion=false
+						var largestID = -1
+						for (var dat of data.data) {
+							if (dat.id>largestNotificationID && dat.operation==="FINISH") {
+								completion=true
+								largestID=Math.max(dat.id,largestID)
+								break
+							} else 
+							if (dat.id>largestNotificationID)
+							{
+								largestID=Math.max(dat.id,largestID)
+							}
+						}
+						if (largestID!==-1) {	
+							largestNotificationID = largestID
+							if (completion) {progress2.play()} else {progress1.play()}
 						}
 					}
-					if (largestID!==-1) {	
-						largestNotificationID = largestID
-						if (completion) {progress2.play()} else {progress1.play()}
-					}
-				}
-			})
-			.catch((err)=>{
-				console.log(err.message)
-			})
+				})
+				.catch((err)=>{
+					console.log(err.message)
+				})
+				.then(()=>{
+					dataCheck=true
+				})
+			}
 		},1000)
 		return ()=>clearInterval(interval)
 	},[])
